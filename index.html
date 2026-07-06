@@ -1,0 +1,1752 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>يونيتز - الرئيسية</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lenis@1.3.23/dist/lenis.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Cairo', Arial, sans-serif;
+            background-color: #f4e9e1;
+            color: #000;
+            overflow-x: hidden;
+            direction: rtl;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        /* ===== PRELOADER ===== */
+        .preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #f4e9e1;
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .preloader-inner {
+            text-align: center;
+        }
+
+        .preloader-text {
+            font-family: 'Cairo', Arial, sans-serif;
+            font-size: 120px;
+            font-weight: 900;
+            color: #000;
+            letter-spacing: -4px;
+            display: block;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .preloader-sub {
+            font-family: 'Cairo', Arial, sans-serif;
+            font-size: 12px;
+            font-weight: 700;
+            color: #000;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            display: block;
+            opacity: 0;
+            transform: translateY(20px);
+            margin-top: -10px;
+        }
+
+        /* ===== SIDEBAR ===== */
+        .sidebar {
+            position: fixed;
+            right: 0;
+            top: 0;
+            width: 170px;
+            height: 100vh;
+            padding: 24px 14px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            z-index: 100;
+            background: #f4e9e1;
+            direction: ltr;
+            overflow: hidden;
+        }
+
+        .logo { text-align: left; }
+
+        .logo h1 {
+            font-size: 40px;
+            font-weight: 900;
+            color: #000;
+            line-height: 1;
+            letter-spacing: -2px;
+        }
+
+        .logo p {
+            font-size: 6.5px;
+            font-weight: 700;
+            color: #000;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        .nav-card {
+            width: 140px;
+            height: 100px;
+            border-radius: 16px;
+            padding: 14px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            cursor: pointer;
+            text-decoration: none;
+            color: #000;
+            transition: transform 0.3s ease;
+            position: relative;
+        }
+
+        .nav-card:hover { transform: scale(1.05); }
+
+        .nav-card .number { font-size: 13px; font-weight: 700; direction: ltr; }
+        .nav-card .label { font-size: 15px; font-weight: 700; line-height: 1.2; }
+        .nav-card .arrow { position: absolute; top: 14px; right: 14px; font-size: 16px; }
+
+        .nav-blue { background: #2b7de9; }
+        .nav-yellow { background: #f5b731; }
+        .nav-orange { background: #f27a2c; }
+        .nav-green { background: #2dba6e; }
+
+        .nav-purple {
+            background: #b06aff;
+            color: #fff;
+            height: 52px;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            border-radius: 50px;
+            width: 140px;
+        }
+        .nav-purple .label { font-size: 14px; }
+
+        .nav-black {
+            background: #000;
+            color: #fff;
+            height: 42px;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50px;
+            width: 140px;
+            gap: 6px;
+            flex-direction: row;
+        }
+        .nav-black .label { font-size: 13px; }
+        .nav-black .globe { font-size: 16px; }
+
+        .social-icons { display: flex; gap: 10px; padding-right: 4px; }
+
+        .social-icons a {
+            width: 28px;
+            height: 28px;
+            border: 1.5px solid #000;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 12px;
+            color: #000;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .social-icons a:hover { background: #000; color: #fff; }
+
+        /* ===== MAIN CONTENT ===== */
+        .main-content { margin-right: 170px; margin-left: 0; }
+
+        /* ===== HERO ===== */
+        .hero {
+            position: relative;
+            width: 100%;
+            height: 85vh;
+            min-height: 500px;
+            overflow: hidden;
+        }
+
+        .hero-image { width: 100%; height: 100%; object-fit: cover; }
+
+        .hero-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 60px 50px;
+            background: linear-gradient(transparent, rgba(0,0,0,0.6));
+            text-align: right;
+        }
+
+        .hero-title {
+            font-size: 56px;
+            font-weight: 900;
+            color: #fff;
+            line-height: 1.05;
+            margin-bottom: 16px;
+            max-width: 600px;
+        }
+
+        .hero-subtitle {
+            font-size: 16px;
+            color: #fff;
+            max-width: 500px;
+            line-height: 1.5;
+            margin-bottom: 28px;
+        }
+
+        .hero-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #000;
+            color: #fff;
+            padding: 14px 32px;
+            border-radius: 50px;
+            font-size: 15px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: background 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .hero-btn:hover { background: #333; }
+        .hero-btn .arrow-icon { font-size: 16px; }
+
+        /* ===== LOCATIONS ===== */
+        .locations { padding: 50px; }
+
+        .locations-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            background: #f5b731;
+            border-radius: 24px;
+            overflow: hidden;
+        }
+
+        .locations-text { padding: 40px; text-align: right; }
+
+        .tag {
+            display: inline-block;
+            border: 2px solid #000;
+            border-radius: 50px;
+            padding: 6px 18px;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+
+        .locations-text h2 {
+            font-size: 36px;
+            font-weight: 900;
+            line-height: 1.15;
+            margin-bottom: 20px;
+        }
+
+        .locations-text p {
+            font-size: 14px;
+            line-height: 1.7;
+            margin-bottom: 24px;
+        }
+
+        .locations-text .explore { font-size: 18px; font-weight: 700; margin-bottom: 16px; }
+
+        .location-tags { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+
+        .location-tags .tag-small {
+            border: 2px solid #000;
+            border-radius: 50px;
+            padding: 6px 16px;
+            font-size: 12px;
+            font-weight: 600;
+            background: #fff;
+        }
+
+        .location-tags .tag-orange { background: #f27a2c; color: #fff; border: none; }
+
+        .locations-map {
+            background: #e8a020;
+            min-height: 350px;
+            overflow: hidden;
+        }
+
+        .locations-map img { width: 100%; height: 100%; object-fit: cover; }
+
+        /* ===== MARQUEE ===== */
+        .marquee-container {
+            background: #e85d2c;
+            border-radius: 50px;
+            padding: 14px 0;
+            overflow: hidden;
+            margin: 0 50px;
+        }
+
+        .marquee {
+            display: flex;
+            gap: 30px;
+            animation: marqueeScroll 20s linear infinite;
+            white-space: nowrap;
+        }
+
+        .marquee-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 15px;
+            font-weight: 700;
+            color: #000;
+            flex-shrink: 0;
+        }
+
+        .marquee-item .lightning { font-size: 18px; }
+        .marquee-item .diamond { font-size: 10px; }
+
+        @keyframes marqueeScroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* ===== FEATURES ===== */
+        .features { padding: 50px; }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: auto auto;
+            gap: 20px;
+        }
+
+        .feature-card { border-radius: 20px; overflow: hidden; }
+
+        .feature-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .feature-card--info { padding: 30px; text-align: right; }
+        .feature-card--info h3 { font-size: 28px; font-weight: 900; margin-bottom: 6px; }
+        .feature-card--info .subtitle { font-size: 15px; font-weight: 700; margin-bottom: 16px; }
+        .feature-card--info ul { list-style: none; }
+        .feature-card--info li { padding: 8px 0; font-size: 13px; border-top: 1px solid rgba(0,0,0,0.15); }
+        .feature-card--info li:first-child { border-top: none; }
+
+        .feature-orange { background: #f27a2c; }
+        .feature-purple { background: #c9a5f0; }
+        .feature-yellow { background: #f5b731; }
+        .feature-green { background: #2dba6e; }
+
+        .feature-card--image { min-height: 280px; }
+        .feature-card--image img { min-height: 280px; }
+
+        /* ===== SECOND MARQUEE (BLUE) ===== */
+        .marquee-blue { background: #2b7de9; }
+        .marquee-reverse { animation-direction: reverse; }
+
+        /* ===== OUR UNITS ===== */
+        .our-units { padding: 0 50px 50px; }
+
+        .our-units-header { margin-bottom: 20px; }
+
+        .our-units-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .our-units-card {
+            background: #fff;
+            border: 2px solid #000;
+            border-radius: 24px;
+            padding: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .our-units-card h3 {
+            font-size: 24px;
+            font-weight: 900;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .our-units-images {
+            border-radius: 24px;
+            overflow: hidden;
+        }
+
+        .our-units-images img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* ===== COMMUNITY 3-COL ===== */
+        .community-3col {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .community-img {
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .community-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .community-center {
+            background: #e85d5d;
+            border-radius: 20px;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 16px;
+        }
+
+        .community-center .tag { border-color: #000; background: transparent; color: #000; }
+
+        .community-center .community-title {
+            font-size: 32px;
+            font-weight: 900;
+            color: #fff;
+            line-height: 1.2;
+            text-align: left;
+        }
+
+        .community-center .community-desc {
+            font-size: 13px;
+            line-height: 1.7;
+            color: #fff;
+            max-width: 350px;
+            text-align: left;
+        }
+
+        .community-link-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #000;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            padding: 14px 28px;
+            border-radius: 50px;
+            transition: background 0.3s;
+        }
+
+        .community-link-btn:hover { background: #333; }
+
+        .community-gallery img {
+            width: 250px;
+            height: 200px;
+            border-radius: 16px;
+        }
+
+        /* ===== DEFINES BLUE BANNER ===== */
+        .defines-banner {
+            background: #2b7de9;
+            padding: 30px 0;
+            overflow: hidden;
+            border-radius: 24px;
+            margin: 0 50px;
+        }
+
+        .defines-banner .defines-marquee-wrapper { width: 100%; }
+        .defines-banner .defines-marquee-inner .text { color: #fff; }
+
+        /* ===== VALUE CARDS BLUE ===== */
+        .value-blue {
+            background: #2b7de9;
+            color: #fff;
+            border-radius: 20px;
+            padding: 30px;
+        }
+
+        .value-blue h3 { color: #fff; }
+        .value-blue p { color: #fff; opacity: 0.9; }
+
+        /* ===== STAYING CONNECTED ===== */
+        .staying-connected {
+            display: flex;
+            flex-direction: row-reverse;
+            gap: 20px;
+            padding: 0 50px 50px;
+            overflow: hidden;
+        }
+
+        .staying-connected-card {
+            border-radius: 20px;
+            padding: 30px;
+            min-width: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            gap: 10px;
+        }
+
+        .staying-connected-card .tag { border-color: #000; background: transparent; color: #000; align-self: flex-start; }
+
+        .staying-connected-card h3 {
+            font-size: 28px;
+            font-weight: 900;
+            color: #000;
+        }
+
+        .staying-connected-gallery {
+            display: flex;
+            gap: 12px;
+            overflow: hidden;
+        }
+
+        .staying-connected-gallery img {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 16px;
+            flex-shrink: 0;
+        }
+
+        /* ===== NEWSLETTER LAYOUT ===== */
+        .newsletter {
+            display: flex;
+            flex-direction: row-reverse;
+            gap: 0;
+            margin: 0;
+            border-radius: 0;
+            padding: 0 50px;
+        }
+
+        .newsletter-label {
+            background: #e85d5d;
+            border-radius: 24px 0 0 24px;
+            padding: 40px;
+            display: flex;
+            align-items: center;
+            flex-shrink: 0;
+        }
+
+        .newsletter-label h3 { font-size: 22px; font-weight: 900; color: #fff; white-space: nowrap; }
+
+        .newsletter-form {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            background: #f5b731;
+            border-radius: 0 24px 24px 0;
+            padding: 4px 4px 4px 20px;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            border: none;
+            background: transparent;
+            font-size: 14px;
+            outline: none;
+            padding: 10px 0;
+        }
+
+        .newsletter-form button {
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            background: #000;
+            color: #fff;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        /* ===== VIDEO SECTION ===== */
+        .video-section { padding: 0 50px 50px; display: none; }
+
+        .video-card {
+            background: #2dba6e;
+            border-radius: 24px;
+            padding: 40px;
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .video-card:hover { transform: scale(1.01); }
+        .video-card h3 { font-size: 24px; font-weight: 900; }
+
+        .video-card .play-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+
+        /* ===== COMMUNITY ===== */
+        .community { padding: 50px; }
+        /* (old styles removed) */
+
+        /* ===== WHAT DEFINES US ===== */
+        .defines {
+            padding: 50px 0;
+            overflow: hidden;
+        }
+
+        .defines-marquee-wrapper {
+            display: flex;
+            align-items: center;
+            width: max-content;
+        }
+
+        .defines-marquee-inner {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            padding: 20px 40px;
+        }
+
+        .defines-marquee-inner .text {
+            font-size: 60px;
+            font-weight: 900;
+            white-space: nowrap;
+        }
+
+        .defines-marquee-inner .img-small {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            padding: 40px 50px;
+        }
+
+        .value-card { text-align: right; }
+        .value-card h3 { font-size: 22px; font-weight: 900; margin-bottom: 12px; }
+        .value-card p { font-size: 13px; line-height: 1.7; color: #333; }
+
+        /* ===== OUR WAY ===== */
+        .our-way { padding: 0 50px 50px; }
+
+        .our-way-card {
+            background: #f5b731;
+            border-radius: 24px;
+            padding: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .our-way-card h3 {
+            font-size: 24px;
+            font-weight: 900;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .our-way-card h3 .arrow-icon { font-size: 20px; }
+
+        .our-way-images {
+            display: flex;
+            gap: 12px;
+        }
+
+        .our-way-images img {
+            width: 80px;
+            height: 80px;
+            border-radius: 12px;
+            object-fit: cover;
+        }
+
+        /* ===== NEWSLETTER (new layout above) ===== */
+
+        /* ===== FOOTER ===== */
+        .footer {
+            margin: 0 50px;
+            background: #f4e9e1;
+            position: relative;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(20, 1fr);
+            grid-template-rows: repeat(8, 50px);
+        }
+
+        .footer-grid .cell { border: 1px solid #d5cdc5; }
+        .footer-grid .cell-orange { background: #f27a2c; }
+        .footer-grid .cell-green { background: #2dba6e; }
+        .footer-grid .cell-pink { background: #e85d5d; }
+        .footer-grid .cell-purple { background: #b06aff; }
+        .footer-grid .cell-blue { background: #2b7de9; }
+
+        .footer-logo { text-align: center; padding: 30px 0; }
+
+        .footer-logo h2 {
+            font-size: 120px;
+            font-weight: 900;
+            letter-spacing: -4px;
+            line-height: 1;
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            border-top: 1px solid #d5cdc5;
+        }
+
+        .footer-bottom-left { font-size: 13px; }
+        .footer-bottom-left .copy { font-weight: 700; }
+
+        .footer-bottom-right { display: flex; gap: 10px; }
+
+        .footer-bottom-right a {
+            border: 1.5px solid #000;
+            border-radius: 50px;
+            padding: 8px 18px;
+            font-size: 12px;
+            font-weight: 600;
+            text-decoration: none;
+            color: #000;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .footer-bottom-right a:hover { background: #000; color: #fff; }
+
+        /* ===== SCROLL ANIMATIONS ===== */
+        .anim-hidden { opacity: 0; }
+        .anim-fade-up { opacity: 0; transform: translateY(40px); }
+        .anim-clip { clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%); }
+
+        .hero { position: relative; width: 100%; height: 85vh; min-height: 500px; overflow: hidden; }
+
+        .hero .image-wrap {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 0;
+            overflow: hidden;
+        }
+        .hero .image-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 900px) {
+            .sidebar {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                top: auto;
+                width: 100%;
+                height: auto;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                padding: 10px;
+                gap: 6px;
+                border-radius: 20px 20px 0 0;
+                direction: ltr;
+            }
+
+            .nav-card { width: 100px; height: 70px; border-radius: 12px; }
+            .nav-card .label { font-size: 11px; }
+            .nav-card .number { font-size: 11px; }
+            .nav-purple, .nav-black { width: 100px; height: 36px; }
+            .logo { display: none; }
+            .social-icons { display: none; }
+
+            .main-content { margin-right: 0; margin-bottom: 120px; }
+            .hero-title { font-size: 32px; }
+            .locations-grid { grid-template-columns: 1fr; }
+            .features-grid { grid-template-columns: 1fr; }
+            .values-grid { grid-template-columns: 1fr; padding: 20px; }
+            .hero, .locations, .features, .community, .our-way { padding: 20px; }
+            .marquee-container { margin: 0 20px; }
+            .newsletter { padding: 0 20px; flex-direction: column; }
+            .newsletter-label { border-radius: 24px 24px 0 0; }
+            .newsletter-form { border-radius: 0 0 24px 24px; }
+            .footer { margin: 0 20px; }
+            .footer-logo h2 { font-size: 60px; }
+            .defines-marquee-inner .text { font-size: 36px; }
+            .community-3col { grid-template-columns: 1fr; }
+            .community-center { align-items: center; text-align: center; }
+            .community-center .community-title, .community-center .community-desc { text-align: center; }
+            .our-units-grid { grid-template-columns: 1fr; }
+            .staying-connected { flex-direction: column; padding: 0 20px 20px; }
+            .staying-connected-gallery { overflow-x: auto; }
+            .defines-banner { margin: 0 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- PRELOADER -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-inner">
+            <span class="preloader-text">units.</span>
+            <span class="preloader-sub">UNIQUE STUDENT HOMES</span>
+        </div>
+    </div>
+
+    <!-- SIDEBAR -->
+    <nav class="sidebar">
+        <div class="logo">
+            <h1>units.</h1>
+            <p>Unique Student Homes</p>
+        </div>
+
+        <a class="nav-card nav-blue" href="#student-homes">
+            <span class="number">01</span>
+            <span class="arrow">&#8599;</span>
+            <span class="label">سكن طلاب</span>
+        </a>
+
+        <a class="nav-card nav-yellow" href="#our-way">
+            <span class="number">02</span>
+            <span class="arrow">&#8599;</span>
+            <span class="label">أسلوب حياتنا</span>
+        </a>
+
+        <a class="nav-card nav-orange" href="#community">
+            <span class="number">03</span>
+            <span class="arrow">&#8599;</span>
+            <span class="label">المجتمع</span>
+        </a>
+
+        <a class="nav-card nav-green" href="#contact">
+            <span class="number">04</span>
+            <span class="arrow">&#8599;</span>
+            <span class="label">تواصل معانا</span>
+        </a>
+
+        <a class="nav-purple" href="#book">
+            <span class="label">احجز وحدتك</span>
+        </a>
+
+        <a class="nav-black" href="#">
+            <span class="label">English</span>
+            <span class="globe">&#127760;</span>
+        </a>
+
+        <div class="social-icons">
+            <a href="https://www.instagram.com/units.gr/" target="_blank" title="Instagram">&#9737;</a>
+            <a href="https://www.facebook.com/units.gr" target="_blank" title="Facebook">f</a>
+            <a href="https://www.tiktok.com/@units.gr" target="_blank" title="TikTok">&#9835;</a>
+        </div>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+
+        <!-- HERO -->
+        <section class="hero" id="student-homes">
+            <div class="image-wrap">
+                <img class="hero-image" src="images/3.png" alt="Units student home interior">
+            </div>
+            <div class="hero-overlay">
+                <h1 class="hero-title anim-fade-up">بيت الطلاب اللي مفيش زيه.</h1>
+                <p class="hero-subtitle anim-fade-up">سكن طلاب شامل بكل اللي محتاجه عشان تعيش و تدرس و تتعامل مع الناس.</p>
+                <a href="#book" class="hero-btn anim-fade-up">
+                    احجز وحدتك
+                    <span class="arrow-icon">&#8599;</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- LOCATIONS -->
+        <section class="locations" id="locations">
+            <div class="locations-grid anim-fade-up">
+                <div class="locations-text">
+                    <span class="tag">المواقع</span>
+                    <h2>حيث يومك بيشتغل لوحده</h2>
+                    <p>صحيت، نزلت، وصلت. الجامعة، المحاضرات، السهر – كلهم قريبين منك. مفيش وقت ضايع. لأن في يونيتز، الموقع مش عشوائي. إنه مختار يناسب نمط حياتك ويخليها أسهل.</p>
+                    <p class="explore">شوف ايه اللي</p>
+                    <div class="location-tags">
+                        <span class="tag-small">قريبًا</span>
+                        <span>و</span>
+                        <span class="tag-small tag-orange">جاهز للسكن!</span>
+                    </div>
+                </div>
+                <div class="locations-map">
+                    <img src="images/5.png" alt="Map showing Units Parkside location">
+                </div>
+            </div>
+        </section>
+
+        <!-- MARQUEE -->
+        <div class="marquee-container anim-hidden">
+            <div class="marquee">
+                <span class="marquee-item"><span class="diamond">&#9670;</span> أمن 24/7</span>
+                <span class="marquee-item"><span class="lightning">&#9889;</span> صيانة سريعة وموثوقة</span>
+                <span class="marquee-item"><span class="diamond">&#9670;</span> حياة ذكية</span>
+                <span class="marquee-item"><span class="lightning">&#9889;</span> مناطق اجتماعية</span>
+                <span class="marquee-item"><span class="diamond">&#9670;</span> مطبخ وحمام خاص</span>
+                <span class="marquee-item"><span class="lightning">&#9889;</span> أمن 24/7</span>
+                <span class="marquee-item"><span class="diamond">&#9670;</span> صيانة سريعة وموثوقة</span>
+                <span class="marquee-item"><span class="lightning">&#9889;</span> حياة ذكية</span>
+                <span class="marquee-item"><span class="diamond">&#9670;</span> مناطق اجتماعية</span>
+                <span class="marquee-item"><span class="lightning">&#9889;</span> مطبخ وحمام خاص</span>
+            </div>
+        </div>
+
+        <!-- FEATURES -->
+        <section class="features">
+            <div class="features-grid">
+                <div class="feature-card feature-card--image js-image-reveal">
+                    <img src="images/6.png" alt="Plant illustration" style="min-height:280px;">
+                </div>
+                <div class="feature-card feature-card--info feature-orange anim-fade-up">
+                    <h3>الأمان</h3>
+                    <div class="subtitle">يوم وليل</div>
+                    <ul>
+                        <li>كاميرات مراقبة 24/7</li>
+                        <li>جولات ليلية</li>
+                        <li>باب دخول بأمان عالي وقفل إلكتروني</li>
+                        <li>نظام دخول ذكي وآمن</li>
+                    </ul>
+                </div>
+                <div class="feature-card feature-card--image js-image-reveal">
+                    <img src="images/3.png" alt="Colorful student living space" style="min-height:280px;">
+                </div>
+                <div class="feature-card feature-card--info feature-purple anim-fade-up">
+                    <h3>مساحات مجتمعية</h3>
+                    <div class="subtitle">دخول مفتوح، 24/7</div>
+                    <ul>
+                        <li>جيم مجهز بالكامل</li>
+                        <li>غرفة غسيل ذاتي</li>
+                        <li>مناطق اجتماعية</li>
+                    </ul>
+                </div>
+                <div class="feature-card feature-card--image js-image-reveal">
+                    <img src="images/7.png" alt="Smart lock" style="min-height:280px;">
+                </div>
+                <div class="feature-card feature-card--info feature-yellow anim-fade-up">
+                    <h3>Support</h3>
+                    <div class="subtitle">بنغطيلك كل حاجة</div>
+                    <ul>
+                        <li>دعم السكان 24/7</li>
+                        <li>مساعدة في تسجيل الدخول والتوجيه</li>
+                        <li>معالجة سريعة للطلبات</li>
+                        <li>دعم صيانة سريع</li>
+                        <li>تحسينات مستمرة على التجربة</li>
+                    </ul>
+                </div>
+                <div class="feature-card feature-card--info feature-green anim-fade-up">
+                    <h3>Smart Living</h3>
+                    <div class="subtitle">مصمم للراحة اليومية</div>
+                    <ul>
+                        <li>مفتاح موبايل رقمي</li>
+                        <li>حجز المساحات المشتركة</li>
+                        <li>نظام تذاكر الصيانة</li>
+                        <li>غسيل EasyPay</li>
+                        <li>الاتصال الداخلي الرقمي</li>
+                    </ul>
+                </div>
+                <div class="feature-card feature-card--image js-image-reveal">
+                    <img src="images/1.png" alt="Student workspace" style="min-height:280px;">
+                </div>
+            </div>
+        </section>
+
+        <!-- SECOND MARQUEE (Blue) -->
+        <div class="marquee-container marquee-blue anim-hidden">
+            <div class="marquee marquee-reverse">
+                <span class="marquee-item"><span class="diamond">&#9670;</span> Electric bike stations</span>
+                <span class="marquee-item"><span class="lightning">&#9889;</span> Elevator access</span>
+                <span class="marquee-item"><span class="diamond">&#9670;</span> Super-fast WiFi</span>
+                <span class="marquee-item"><span class="lightning">&#9889;</span> 24/7 Hot water</span>
+                <span class="marquee-item"><span class="diamond">&#9670;</span> Electric bike stations</span>
+                <span class="marquee-item"><span class="lightning">&#9889;</span> Elevator access</span>
+                <span class="marquee-item"><span class="diamond">&#9670;</span> Super-fast WiFi</span>
+                <span class="marquee-item"><span class="lightning">&#9889;</span> 24/7 Hot water</span>
+            </div>
+        </div>
+
+        <!-- OUR UNITS -->
+        <section class="our-units" id="our-units">
+            <div class="our-units-header anim-fade-up">
+                <span class="tag">Our Units</span>
+            </div>
+            <div class="our-units-grid">
+                <div class="our-units-card anim-fade-up">
+                    <h3>شوف الوحدات بتاعتنا <span class="arrow-icon">&#8599;</span></h3>
+                </div>
+                <div class="our-units-images js-image-reveal">
+                    <img src="images/3.png" alt="Unit interior" style="min-height:280px;">
+                </div>
+            </div>
+        </section>
+
+        <!-- COMMUNITY -->
+        <section class="community" id="community">
+            <div class="community-3col">
+                <div class="community-img js-image-reveal">
+                    <img src="images/8.png" alt="Community space" style="min-height:300px;">
+                </div>
+                <div class="community-center feature-red">
+                    <span class="tag">Community</span>
+                    <h2 class="community-title anim-fade-up">أسلوب حياة مشترك</h2>
+                    <p class="community-desc anim-fade-up">في يونيتز، المجتمع بيتكون بشكل طبيعي. عن طريق المساحات المشتركة، اللحظات المشتركة، والتجارب اللي بتجمع الناس – مع الحرية إنك تنضم في أي وقت وبأي شكل عايزه.</p>
+                    <a href="#" class="community-link-btn anim-fade-up">انضم للمجتمع بتاعنا &#8599;</a>
+                </div>
+                <div class="community-img js-image-reveal">
+                    <img src="images/11.png" alt="Community event" style="min-height:300px;">
+                </div>
+            </div>
+            <div class="community-gallery" style="margin-top: 30px;">
+                <img class="js-image-reveal" src="images/9.png" alt="Student life">
+                <img class="js-image-reveal" src="images/10.png" alt="Living area">
+                <img class="js-image-reveal" src="images/12.png" alt="Community event">
+                <img class="js-image-reveal" src="images/13.png" alt="Student home">
+                <img class="js-image-reveal" src="images/14.png" alt="Community">
+            </div>
+        </section>
+
+        <!-- WHAT DEFINES US -->
+        <section class="defines">
+            <div class="defines-banner">
+                <div class="defines-marquee-wrapper">
+                    <div class="defines-marquee-inner">
+                        <img class="img-small" src="images/14.png" alt="">
+                        <span class="text">What defines us</span>
+                        <img class="img-small" src="images/1.png" alt="">
+                        <span class="text">What defines us</span>
+                        <img class="img-small" src="images/14.png" alt="">
+                        <span class="text">What defines us</span>
+                        <img class="img-small" src="images/1.png" alt="">
+                        <span class="text">What defines us</span>
+                    </div>
+                    <div class="defines-marquee-inner">
+                        <img class="img-small" src="images/14.png" alt="">
+                        <span class="text">What defines us</span>
+                        <img class="img-small" src="images/1.png" alt="">
+                        <span class="text">What defines us</span>
+                        <img class="img-small" src="images/14.png" alt="">
+                        <span class="text">What defines us</span>
+                        <img class="img-small" src="images/1.png" alt="">
+                        <span class="text">What defines us</span>
+                    </div>
+                </div>
+            </div>
+            <div class="values-grid">
+                <div class="value-card value-blue anim-fade-up">
+                    <h3>For People</h3>
+                    <p>كل حاجة بتبدأ بإحساسك وأنت عايش هنا. من المساحات الخاصة للتجارب المشتركة، الناس دايمًا أولويتنا.</p>
+                </div>
+                <div class="value-card value-blue anim-fade-up">
+                    <h3>By Design</h3>
+                    <p>مفيش حاجة بالصدفة. كل تفصيلة مصممة عشان تدعم طريقة حياتك وإحساسك، كل يوم.</p>
+                </div>
+                <div class="value-card value-blue anim-fade-up">
+                    <h3>With Care</h3>
+                    <p>في قلب كل حاجة بنعملها. بنهتم بالناس اللي عايشين هنا، والمساحات اللي بنصممها، والمدينة اللي إحنا جزء منها.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- OUR WAY OF LIVING -->
+        <section class="our-way" id="our-way">
+            <div class="our-way-card anim-fade-up">
+                <h3>أسلوب حياتنا <span class="arrow-icon">&#8599;</span></h3>
+                <div class="our-way-images">
+                    <img src="images/2.png" alt="">
+                    <img src="images/8.png" alt="">
+                    <img src="images/9.png" alt="">
+                </div>
+            </div>
+        </section>
+
+        <!-- STAYING CONNECTED -->
+        <section class="staying-connected">
+            <div class="staying-connected-card feature-purple">
+                <span class="tag">Instagram</span>
+                <h3>Staying<br>connected</h3>
+            </div>
+            <div class="staying-connected-gallery">
+                <img class="js-image-reveal" src="images/8.png" alt="">
+                <img class="js-image-reveal" src="images/9.png" alt="">
+                <img class="js-image-reveal" src="images/10.png" alt="">
+                <img class="js-image-reveal" src="images/11.png" alt="">
+                <img class="js-image-reveal" src="images/12.png" alt="">
+            </div>
+        </section>
+
+        <!-- NEWSLETTER -->
+        <div class="newsletter anim-fade-up" id="contact">
+            <div class="newsletter-label">
+                <h3>Join our newsletter</h3>
+            </div>
+            <div class="newsletter-form">
+                <input type="email" placeholder="Your email here">
+                <button>&#8599;</button>
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <footer class="footer anim-fade-up">
+            <div class="footer-grid">
+                <!-- Row 1 -->
+                <div class="cell"></div><div class="cell"></div><div class="cell"></div>
+                <div class="cell cell-orange"></div>
+                <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+                <div class="cell cell-green"></div>
+                <div class="cell"></div><div class="cell"></div><div class="cell"></div>
+                <div class="cell cell-pink"></div>
+                <div class="cell"></div><div class="cell"></div><div class="cell"></div>
+                <div class="cell cell-purple"></div>
+                <div class="cell"></div><div class="cell"></div><div class="cell"></div>
+                <!-- Row 2 -->
+                <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+                <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+                <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+                <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+                <div class="cell"></div><div class="cell"></div>
+                <div class="cell cell-blue"></div>
+                <div class="cell"></div>
+                <!-- Row 3-8: empty cells -->
+                <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+                <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+                <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+                <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+                <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+
+                <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+                <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+                <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+                <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+                <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+
+                <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+                <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+                <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+                <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+                <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+
+                <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+                <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+                <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+                <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+                <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+
+                <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+                <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+                <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+                <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+                <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+
+                <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+                <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+                <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+                <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+                <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+            </div>
+
+            <div class="footer-logo">
+                <h2>units.</h2>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-bottom-left">
+                    <div class="copy">&copy; 2026 KORPO Development</div>
+                    <div>تصميم موقع من Big Horror. كود من Lemonjelly</div>
+                </div>
+                <div class="footer-bottom-right">
+                    <a href="#">الأسئلة الشائعة</a>
+                    <a href="#">سياسة الخصوصية</a>
+                    <a href="#">سياسة ملفات تعريف الارتباط</a>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <script>
+    (function() {
+        gsap.registerPlugin(ScrollTrigger);
+
+        // ===== LENIS SMOOTH SCROLL =====
+        const lenis = new Lenis({
+            duration: 1,
+            easing: function(t) {
+                return Math.min(1, 1.001 - Math.pow(2, -10 * t));
+            },
+            orientation: "vertical",
+            gestureOrientation: "vertical",
+            smooth: true,
+            mouseMultiplier: 1,
+            smoothTouch: false,
+            touchMultiplier: 2,
+            infinite: false
+        });
+
+        lenis.on('scroll', ScrollTrigger.update);
+
+        gsap.ticker.add(function(time) {
+            lenis.raf(time * 1000);
+        });
+        gsap.ticker.lagSmoothing(0);
+
+        // ===== PRELOADER ANIMATION =====
+        const preloaderTl = gsap.timeline({
+            onComplete: function() {
+                document.getElementById('preloader').style.display = 'none';
+            }
+        });
+
+        preloaderTl.to('.preloader-text', {
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            ease: 'power3.out'
+        });
+        preloaderTl.to('.preloader-sub', {
+            opacity: 1,
+            y: 0,
+            duration: 0.6,
+            ease: 'power3.out'
+        }, '-=0.3');
+        preloaderTl.to('.preloader', {
+            yPercent: -100,
+            duration: 0.8,
+            ease: 'power3.inOut',
+            delay: 0.5
+        });
+
+        // ===== HERO REVEAL =====
+        const heroTl = gsap.timeline({ delay: 2.5 });
+
+        // Image clip-path reveal from bottom
+        heroTl.fromTo('.hero .image-wrap',
+            { height: '0%' },
+            { height: '100%', duration: 1.2, ease: 'power3.inOut' }
+        );
+
+        // Simultaneous image zoom-in (parallax feel)
+        heroTl.from('.hero .image-wrap img',
+            { y: -60, scale: 1.05, duration: 1.2, ease: 'power3.inOut' },
+            '<'
+        );
+
+        // Text fade in stagger
+        heroTl.fromTo('.hero .hero-title',
+            { opacity: 0, y: 40 },
+            { opacity: 1, y: 0, duration: 0.8, ease: 'power.out' },
+            '-=0.5'
+        );
+        heroTl.fromTo('.hero .hero-subtitle',
+            { opacity: 0, y: 40 },
+            { opacity: 1, y: 0, duration: 0.8, ease: 'power.out' },
+            '-=0.6'
+        );
+        heroTl.fromTo('.hero .hero-btn',
+            { opacity: 0, y: 40 },
+            { opacity: 1, y: 0, duration: 0.8, ease: 'power.out' },
+            '-=0.6'
+        );
+
+        // ===== HERO PARALLAX ON SCROLL =====
+        gsap.to('.hero .image-wrap img', {
+            yPercent: 15,
+            ease: 'none',
+            scrollTrigger: {
+                trigger: '.hero',
+                start: 'top top',
+                end: 'bottom top',
+                scrub: true
+            }
+        });
+
+        // ===== LOCATIONS FADE IN =====
+        gsap.fromTo('.locations .anim-fade-up',
+            { opacity: 0, y: 40 },
+            {
+                opacity: 1,
+                y: 0,
+                duration: 1.6,
+                ease: 'expo.out',
+                scrollTrigger: {
+                    trigger: '.locations',
+                    start: 'top 80%',
+                    toggleActions: 'play pause resume reset'
+                }
+            }
+        );
+
+        // ===== MARQUEE FADE IN =====
+        gsap.fromTo('.marquee-container',
+            { opacity: 0 },
+            {
+                opacity: 1,
+                duration: 0.6,
+                ease: 'power.out',
+                scrollTrigger: {
+                    trigger: '.marquee-container',
+                    start: 'top 85%',
+                    toggleActions: 'play pause resume reset'
+                }
+            }
+        );
+
+        // ===== FEATURE CARDS BATCH ANIMATION =====
+        const featureCards = document.querySelectorAll('.features .feature-card');
+        featureCards.forEach(function(card, i) {
+            gsap.set(card, { opacity: 0, y: 40 });
+            ScrollTrigger.create({
+                trigger: card,
+                start: 'top 85%',
+                onEnter: function() {
+                    gsap.to(card, {
+                        opacity: 1,
+                        y: 0,
+                        duration: 1.6,
+                        delay: i % 3 * 0.1,
+                        ease: 'expo.out',
+                        overwrite: 'auto'
+                    });
+                },
+                once: true
+            });
+        });
+
+        // ===== IMAGE REVEAL WITH CLIP-PATH =====
+        const imageReveals = document.querySelectorAll('.js-image-reveal');
+        imageReveals.forEach(function(el) {
+            const img = el.querySelector('img');
+            if (!img) return;
+
+            gsap.fromTo(el,
+                { clipPath: 'polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)' },
+                {
+                    clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
+                    duration: 2,
+                    ease: 'quint.inOut',
+                    scrollTrigger: {
+                        trigger: el,
+                        start: 'top 85%',
+                        toggleActions: 'play pause resume reset'
+                    }
+                }
+            );
+
+            gsap.fromTo(img,
+                { scale: 1.6 },
+                {
+                    scale: 1,
+                    duration: 3,
+                    ease: 'power.inOut',
+                    scrollTrigger: {
+                        trigger: el,
+                        start: 'top 85%',
+                        toggleActions: 'play pause resume reset'
+                    }
+                }
+            );
+        });
+
+        // ===== OUR UNITS FADE IN =====
+        gsap.fromTo('.our-units .anim-fade-up',
+            { opacity: 0, y: 40 },
+            {
+                opacity: 1,
+                y: 0,
+                duration: 1.6,
+                stagger: 0.15,
+                ease: 'expo.out',
+                scrollTrigger: {
+                    trigger: '.our-units',
+                    start: 'top 80%',
+                    toggleActions: 'play pause resume reset'
+                }
+            }
+        );
+
+        // ===== COMMUNITY SECTION REVEALS =====
+        gsap.fromTo('.community .anim-fade-up',
+            { opacity: 0, y: 40 },
+            {
+                opacity: 1,
+                y: 0,
+                duration: 1.6,
+                stagger: 0.15,
+                ease: 'expo.out',
+                scrollTrigger: {
+                    trigger: '.community',
+                    start: 'top 80%',
+                    toggleActions: 'play pause resume reset'
+                }
+            }
+        );
+
+        // Community gallery images stagger reveal
+        gsap.fromTo('.community-gallery img',
+            { opacity: 0, y: 40, scale: 0.95 },
+            {
+                opacity: 1,
+                y: 0,
+                scale: 1,
+                duration: 1,
+                stagger: 0.1,
+                ease: 'expo.out',
+                scrollTrigger: {
+                    trigger: '.community-gallery',
+                    start: 'top 85%',
+                    toggleActions: 'play pause resume reset'
+                }
+            }
+        );
+
+        // ===== WHAT DEFINES US MARQUEE =====
+        gsap.fromTo('.defines-marquee-wrapper',
+            { opacity: 0 },
+            {
+                opacity: 1,
+                duration: 0.6,
+                ease: 'power.out',
+                scrollTrigger: {
+                    trigger: '.defines',
+                    start: 'top 80%',
+                    toggleActions: 'play pause resume reset'
+                }
+            }
+        );
+
+        // ===== VALUES GRID FADE IN =====
+        gsap.fromTo('.values-grid .anim-fade-up',
+            { opacity: 0, y: 40 },
+            {
+                opacity: 1,
+                y: 0,
+                duration: 1.6,
+                stagger: 0.15,
+                ease: 'expo.out',
+                scrollTrigger: {
+                    trigger: '.values-grid',
+                    start: 'top 80%',
+                    toggleActions: 'play pause resume reset'
+                }
+            }
+        );
+
+        // ===== OUR WAY CARD FADE IN =====
+        gsap.fromTo('.our-way-card',
+            { opacity: 0, y: 40 },
+            {
+                opacity: 1,
+                y: 0,
+                duration: 1.6,
+                ease: 'expo.out',
+                scrollTrigger: {
+                    trigger: '.our-way',
+                    start: 'top 80%',
+                    toggleActions: 'play pause resume reset'
+                }
+            }
+        );
+
+        // ===== STAYING CONNECTED FADE IN =====
+        gsap.fromTo('.staying-connected',
+            { opacity: 0, y: 40 },
+            {
+                opacity: 1,
+                y: 0,
+                duration: 1.6,
+                ease: 'expo.out',
+                scrollTrigger: {
+                    trigger: '.staying-connected',
+                    start: 'top 85%',
+                    toggleActions: 'play pause resume reset'
+                }
+            }
+        );
+
+        // ===== NEWSLETTER FADE IN =====
+        gsap.fromTo('.newsletter',
+            { opacity: 0, y: 40 },
+            {
+                opacity: 1,
+                y: 0,
+                duration: 1.6,
+                ease: 'expo.out',
+                scrollTrigger: {
+                    trigger: '.newsletter',
+                    start: 'top 85%',
+                    toggleActions: 'play pause resume reset'
+                }
+            }
+        );
+
+        // ===== FOOTER FADE IN =====
+        gsap.fromTo('.footer',
+            { opacity: 0, y: 30 },
+            {
+                opacity: 1,
+                y: 0,
+                duration: 1.2,
+                ease: 'expo.out',
+                scrollTrigger: {
+                    trigger: '.footer',
+                    start: 'top 90%',
+                    toggleActions: 'play pause resume reset'
+                }
+            }
+        );
+
+        // ===== IMAGE PARALLAX ON SCROLL =====
+        document.querySelectorAll('.feature-card--image img').forEach(function(img) {
+            gsap.fromTo(img,
+                { yPercent: -5 },
+                {
+                    yPercent: 5,
+                    ease: 'none',
+                    scrollTrigger: {
+                        trigger: img.closest('.feature-card'),
+                        start: 'top bottom',
+                        end: 'bottom top',
+                        scrub: true
+                    }
+                }
+            );
+        });
+
+        // ===== LOCATION MAP PARALLAX =====
+        gsap.fromTo('.locations-map img',
+            { yPercent: -10, scale: 1.1 },
+            {
+                yPercent: 10,
+                scale: 1.1,
+                ease: 'none',
+                scrollTrigger: {
+                    trigger: '.locations',
+                    start: 'top bottom',
+                    end: 'bottom top',
+                    scrub: true
+                }
+            }
+        );
+
+        // ===== COMMUNITY GALLERY CLIP-PATH REVEAL =====
+        document.querySelectorAll('.community-gallery img').forEach(function(img) {
+            gsap.fromTo(img,
+                { clipPath: 'polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)' },
+                {
+                    clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
+                    duration: 1.5,
+                    ease: 'quint.inOut',
+                    scrollTrigger: {
+                        trigger: img,
+                        start: 'top 90%',
+                        toggleActions: 'play pause resume reset'
+                    }
+                }
+            );
+            gsap.fromTo(img,
+                { scale: 1.3 },
+                {
+                    scale: 1,
+                    duration: 2,
+                    ease: 'power.inOut',
+                    scrollTrigger: {
+                        trigger: img,
+                        start: 'top 90%',
+                        toggleActions: 'play pause resume reset'
+                    }
+                }
+            );
+        });
+
+        // ===== OUR WAY IMAGES STAGGER =====
+        gsap.fromTo('.our-way-images img',
+            { opacity: 0, x: 30, scale: 0.9 },
+            {
+                opacity: 1,
+                x: 0,
+                scale: 1,
+                duration: 0.8,
+                stagger: 0.12,
+                ease: 'back.out(1.4)',
+                scrollTrigger: {
+                    trigger: '.our-way',
+                    start: 'top 80%',
+                    toggleActions: 'play pause resume reset'
+                }
+            }
+        );
+
+        // ===== DEFINES MARQUEE GSAP (smoother than CSS) =====
+        gsap.to('.defines-marquee-wrapper', {
+            x: '-50%',
+            ease: 'none',
+            repeat: -1,
+            duration: 20
+        });
+
+        // ===== FOOTER GRID CELLS STAGGER =====
+        const coloredCells = document.querySelectorAll('.footer-grid .cell-orange, .footer-grid .cell-green, .footer-grid .cell-pink, .footer-grid .cell-purple, .footer-grid .cell-blue');
+        gsap.fromTo(coloredCells,
+            { scale: 0, opacity: 0 },
+            {
+                scale: 1,
+                opacity: 1,
+                duration: 0.6,
+                stagger: 0.08,
+                ease: 'back.out(2)',
+                scrollTrigger: {
+                    trigger: '.footer-grid',
+                    start: 'top 90%',
+                    toggleActions: 'play pause resume reset'
+                }
+            }
+        );
+
+        // ===== FOOTER LOGO SCALE-IN =====
+        gsap.fromTo('.footer-logo h2',
+            { scale: 0.8, opacity: 0 },
+            {
+                scale: 1,
+                opacity: 1,
+                duration: 1.2,
+                ease: 'expo.out',
+                scrollTrigger: {
+                    trigger: '.footer-logo',
+                    start: 'top 85%',
+                    toggleActions: 'play pause resume reset'
+                }
+            }
+        );
+
+        // ===== NEWSLETTER FORM BUTTON HOVER PULSE =====
+        document.querySelectorAll('.newsletter-form button').forEach(function(btn) {
+            btn.addEventListener('mouseenter', function() {
+                gsap.to(btn, { scale: 1.1, duration: 0.3, ease: 'back.out(2)' });
+            });
+            btn.addEventListener('mouseleave', function() {
+                gsap.to(btn, { scale: 1, duration: 0.3, ease: 'power.out' });
+            });
+        });
+
+        // ===== NAV CARD HOVER ANIMATION =====
+        document.querySelectorAll('.nav-card').forEach(function(card) {
+            card.addEventListener('mouseenter', function() {
+                gsap.to(card, { scale: 1.05, duration: 0.3, ease: 'back.out(2)' });
+            });
+            card.addEventListener('mouseleave', function() {
+                gsap.to(card, { scale: 1, duration: 0.3, ease: 'power.out' });
+            });
+        });
+
+        // ===== FEATURE CARD HOVER LIFT =====
+        document.querySelectorAll('.feature-card').forEach(function(card) {
+            card.addEventListener('mouseenter', function() {
+                gsap.to(card, { y: -4, duration: 0.3, ease: 'power.out' });
+            });
+            card.addEventListener('mouseleave', function() {
+                gsap.to(card, { y: 0, duration: 0.3, ease: 'power.out' });
+            });
+        });
+
+        // ===== SIDEBAR NAV CARDS STAGGER =====
+        gsap.fromTo('.nav-card',
+            { opacity: 0, x: -30 },
+            {
+                opacity: 1,
+                x: 0,
+                duration: 0.8,
+                stagger: 0.1,
+                ease: 'expo.out',
+                delay: 1.5
+            }
+        );
+
+        gsap.fromTo('.nav-purple, .nav-black',
+            { opacity: 0, x: -30 },
+            {
+                opacity: 1,
+                x: 0,
+                duration: 0.8,
+                stagger: 0.1,
+                ease: 'expo.out',
+                delay: 2
+            }
+        );
+
+        gsap.fromTo('.social-icons a',
+            { opacity: 0, scale: 0 },
+            {
+                opacity: 1,
+                scale: 1,
+                duration: 0.5,
+                stagger: 0.08,
+                ease: 'back.out(2)',
+                delay: 2.2
+            }
+        );
+
+        // ===== LOGO ANIMATION =====
+        gsap.fromTo('.logo h1',
+            { opacity: 0, y: -20 },
+            { opacity: 1, y: 0, duration: 0.8, ease: 'expo.out', delay: 0.5 }
+        );
+        gsap.fromTo('.logo p',
+            { opacity: 0 },
+            { opacity: 1, duration: 0.6, ease: 'power.out', delay: 0.8 }
+        );
+
+    })();
+    </script>
+
+</body>
+</html>
