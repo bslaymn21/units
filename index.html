@@ -157,23 +157,173 @@
         .nav-black .label { font-size: 13px; }
         .nav-black .globe { font-size: 16px; }
 
-        .social-icons { display: flex; gap: 10px; padding-right: 4px; }
+        .social-icons { display: flex; gap: 6px; }
 
-        .social-icons a {
-            width: 28px;
-            height: 28px;
-            border: 1.5px solid #000;
+        .social-icons .social-icon {
+            width: 30px;
+            height: 30px;
+            background: #000;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            text-decoration: none;
             font-size: 12px;
-            color: #000;
-            transition: background 0.3s, color 0.3s;
+            color: #fff;
         }
 
-        .social-icons a:hover { background: #000; color: #fff; }
+        /* ===== MOBILE MENU BUTTON ===== */
+        /* ===== MOBILE HEADER ===== */
+        .mobile-header {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 60px;
+            background: #f4e9e1;
+            padding: 0 16px;
+            z-index: 1000;
+            align-items: center;
+            justify-content: space-between;
+            direction: ltr;
+        }
+
+        .mobile-header-left { display: flex; align-items: center; }
+
+        .mobile-logo h1 {
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            color: #000;
+            line-height: 1;
+        }
+
+        .mobile-logo p {
+            font-size: 6px;
+            font-weight: 600;
+            color: #000;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin: 0;
+        }
+
+        .mobile-header-right {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .mobile-book-btn {
+            background: #6c5ce7;
+            color: #fff;
+            font-size: 11px;
+            font-weight: 700;
+            padding: 8px 16px;
+            border-radius: 30px;
+            cursor: pointer;
+            white-space: nowrap;
+        }
+
+        /* ===== HAMBURGER BUTTON ===== */
+        .menu-btn {
+            display: none;
+            width: 44px;
+            height: 44px;
+            background: #000;
+            border-radius: 50%;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            cursor: pointer;
+            flex-shrink: 0;
+            position: relative;
+            z-index: 1001;
+        }
+
+        .menu-btn span {
+            width: 18px;
+            height: 2px;
+            background: #fff;
+            border-radius: 2px;
+            display: block;
+            transition: all 0.3s ease;
+        }
+
+        .menu-btn.open span:nth-child(1) {
+            transform: translateY(7px) rotate(45deg);
+        }
+
+        .menu-btn.open span:nth-child(2) {
+            opacity: 0;
+            transform: scaleX(0);
+        }
+
+        .menu-btn.open span:nth-child(3) {
+            transform: translateY(-7px) rotate(-45deg);
+        }
+
+        /* ===== MOBILE DROPDOWN MENU ===== */
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 60px;
+            left: 0;
+            width: 100%;
+            height: calc(100vh - 60px);
+            background: #f4e9e1;
+            flex-direction: column;
+            align-items: stretch;
+            gap: 0;
+            padding: 16px;
+            z-index: 999;
+            transform: translateY(-100%);
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            overflow-y: auto;
+        }
+
+        .mobile-menu.open { transform: translateY(0); }
+
+        .mobile-menu .nav-card {
+            width: 100%;
+            height: 70px;
+            flex-shrink: 0;
+        }
+
+        .mobile-book-btn-full {
+            width: 100%;
+            height: 56px;
+            background: #6c5ce7;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 14px;
+            font-size: 14px;
+            font-weight: 700;
+            cursor: pointer;
+            flex-shrink: 0;
+            margin-top: 8px;
+        }
+
+        .mobile-social-pill {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            background: #000;
+            border-radius: 50px;
+            padding: 12px 28px;
+            margin-top: 12px;
+            align-self: center;
+            flex-shrink: 0;
+        }
+
+        .mobile-social-pill .social-icon {
+            color: #fff;
+            font-size: 18px;
+            cursor: pointer;
+        }
 
         /* ===== MAIN CONTENT ===== */
         .main-content { margin-right: 170px; margin-left: 0; }
@@ -789,31 +939,14 @@
 
         /* ===== RESPONSIVE ===== */
         @media (max-width: 900px) {
-            .sidebar {
-                position: fixed;
-                bottom: 0;
-                left: 0;
-                right: 0;
-                top: auto;
-                width: 100%;
-                height: auto;
-                flex-direction: row;
-                flex-wrap: wrap;
-                justify-content: center;
-                padding: 10px;
-                gap: 6px;
-                border-radius: 20px 20px 0 0;
-                direction: ltr;
-            }
+            .sidebar { display: none; }
 
-            .nav-card { width: 100px; height: 70px; border-radius: 12px; }
-            .nav-card .label { font-size: 11px; }
-            .nav-card .number { font-size: 11px; }
-            .nav-purple, .nav-black { width: 100px; height: 36px; }
-            .logo { display: none; }
-            .social-icons { display: none; }
+            .mobile-header { display: flex; }
+            .menu-btn { display: flex; }
+            .mobile-menu { display: flex; }
 
-            .main-content { margin-right: 0; margin-bottom: 120px; }
+            .main-content { margin-right: 0; padding-top: 60px; }
+
             .hero-title { font-size: 32px; }
             .locations-grid { grid-template-columns: 1fr; }
             .features-grid { grid-template-columns: 1fr; }
@@ -843,6 +976,54 @@
         <div class="preloader-inner">
             <span class="preloader-text">units.</span>
             <span class="preloader-sub">UNIQUE STUDENT HOMES</span>
+        </div>
+    </div>
+
+    <!-- MOBILE HEADER -->
+    <div class="mobile-header" id="mobileHeader">
+        <div class="mobile-header-left">
+            <div class="mobile-logo">
+                <h1>units.</h1>
+                <p>UNIQUE STUDENT HOMES</p>
+            </div>
+        </div>
+        <div class="mobile-header-right">
+            <div class="mobile-book-btn">Book your Unit</div>
+            <div class="menu-btn" id="menuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- MOBILE DROPDOWN MENU -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a class="nav-card nav-blue" href="#student-homes">
+            <span class="number">01</span>
+            <span class="arrow">&#8599;</span>
+            <span class="label">Student Homes</span>
+        </a>
+        <a class="nav-card nav-yellow" href="#our-way">
+            <span class="number">02</span>
+            <span class="arrow">&#8599;</span>
+            <span class="label">Our way of living</span>
+        </a>
+        <a class="nav-card nav-orange" href="#community">
+            <span class="number">03</span>
+            <span class="arrow">&#8599;</span>
+            <span class="label">Community</span>
+        </a>
+        <a class="nav-card nav-green" href="#contact">
+            <span class="number">04</span>
+            <span class="arrow">&#8599;</span>
+            <span class="label">Contact</span>
+        </a>
+        <div class="mobile-book-btn-full">Book your Unit</div>
+        <div class="mobile-social-pill">
+            <span class="social-icon">&#9737;</span>
+            <span class="social-icon">f</span>
+            <span class="social-icon">&#9835;</span>
         </div>
     </div>
 
@@ -1210,6 +1391,25 @@
 
     <script>
     (function() {
+        // ===== MOBILE MENU TOGGLE =====
+        var menuBtn = document.getElementById('menuBtn');
+        var mobileMenu = document.getElementById('mobileMenu');
+
+        if (menuBtn) {
+            menuBtn.addEventListener('click', function() {
+                mobileMenu.classList.toggle('open');
+                menuBtn.classList.toggle('open');
+            });
+        }
+
+        // Close menu when clicking a nav link
+        mobileMenu.querySelectorAll('.nav-card').forEach(function(link) {
+            link.addEventListener('click', function() {
+                mobileMenu.classList.remove('open');
+                menuBtn.classList.remove('open');
+            });
+        });
+
         gsap.registerPlugin(ScrollTrigger);
 
         // ===== LENIS SMOOTH SCROLL =====
@@ -1705,19 +1905,7 @@
             }
         );
 
-        gsap.fromTo('.nav-purple, .nav-black',
-            { opacity: 0, x: -30 },
-            {
-                opacity: 1,
-                x: 0,
-                duration: 0.8,
-                stagger: 0.1,
-                ease: 'expo.out',
-                delay: 2
-            }
-        );
-
-        gsap.fromTo('.social-icons a',
+        gsap.fromTo('.social-icons .social-icon',
             { opacity: 0, scale: 0 },
             {
                 opacity: 1,
