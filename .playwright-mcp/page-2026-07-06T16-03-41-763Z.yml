@@ -1,0 +1,176 @@
+- generic [active] [ref=f5e1]:
+  - navigation [ref=f5e2]:
+    - generic [ref=f5e3]:
+      - heading "units." [level=1] [ref=f5e4]
+      - paragraph [ref=f5e5]: Unique Student Homes
+    - link "01 ↗ Student Homes" [ref=f5e6] [cursor=pointer]:
+      - /url: "#student-homes"
+      - generic [ref=f5e7]: "01"
+      - generic [ref=f5e8]: ↗
+      - generic [ref=f5e9]: Student Homes
+    - link "02 ↗ Our way of living" [ref=f5e10] [cursor=pointer]:
+      - /url: "#our-way"
+      - generic [ref=f5e11]: "02"
+      - generic [ref=f5e12]: ↗
+      - generic [ref=f5e13]: Our way of living
+    - link "03 ↗ Community" [ref=f5e14] [cursor=pointer]:
+      - /url: "#community"
+      - generic [ref=f5e15]: "03"
+      - generic [ref=f5e16]: ↗
+      - generic [ref=f5e17]: Community
+    - link "04 ↗ Contact" [ref=f5e18] [cursor=pointer]:
+      - /url: "#contact"
+      - generic [ref=f5e19]: "04"
+      - generic [ref=f5e20]: ↗
+      - generic [ref=f5e21]: Contact
+    - link "Book your Unit" [ref=f5e22] [cursor=pointer]:
+      - /url: "#book"
+    - link "Ελληνικά 🌐" [ref=f5e23] [cursor=pointer]:
+      - /url: "#"
+    - generic [ref=f5e24]:
+      - link "☉" [ref=f5e25] [cursor=pointer]:
+        - /url: https://www.instagram.com/units.gr/
+      - link "f" [ref=f5e26] [cursor=pointer]:
+        - /url: https://www.facebook.com/units.gr
+      - link "♫" [ref=f5e27] [cursor=pointer]:
+        - /url: https://www.tiktok.com/@units.gr
+  - generic [ref=f5e28]:
+    - generic [ref=f5e29]:
+      - img "Units student home interior" [ref=f5e30]
+      - generic [ref=f5e31]:
+        - heading "Home of the uniquely awesome." [level=1] [ref=f5e32]
+        - paragraph [ref=f5e33]: All-inclusive student accommodation with everything you need to live, study and connect.
+        - link "Book your Unit ↗" [ref=f5e34] [cursor=pointer]:
+          - /url: "#book"
+          - text: Book your Unit
+          - generic [ref=f5e35]: ↗
+    - generic [ref=f5e37]:
+      - generic [ref=f5e38]:
+        - generic [ref=f5e39]: Locations
+        - heading "Where your everyday just works" [level=2] [ref=f5e40]
+        - paragraph [ref=f5e41]: Wake up, step out, you're there. Campus, classes, nights out – all within easy reach. No time wasted. Because at Units, location isn't random. It's chosen to match your rhythm and make life work better.
+        - paragraph [ref=f5e42]: Explore what's
+        - generic [ref=f5e43]:
+          - generic [ref=f5e44]: Coming soon
+          - generic [ref=f5e45]: and
+          - generic [ref=f5e46]: Move-in ready!
+      - img "Map showing Units Parkside location" [ref=f5e48]
+    - generic [ref=f5e50]:
+      - generic [ref=f5e51]:
+        - generic [ref=f5e52]: ◆
+        - text: 24/7 Security
+      - generic [ref=f5e53]:
+        - generic [ref=f5e54]: ⚡
+        - text: Fast and reliable maintenance
+      - generic [ref=f5e55]:
+        - generic [ref=f5e56]: ◆
+        - text: Smart living
+      - generic [ref=f5e57]:
+        - generic [ref=f5e58]: ⚡
+        - text: Social areas
+      - generic [ref=f5e59]:
+        - generic [ref=f5e60]: ◆
+        - text: Private kitchen & bathroom
+      - generic [ref=f5e61]:
+        - generic [ref=f5e62]: ⚡
+        - text: 24/7 Security
+      - generic [ref=f5e63]:
+        - generic [ref=f5e64]: ◆
+        - text: Fast and reliable maintenance
+      - generic [ref=f5e65]:
+        - generic [ref=f5e66]: ⚡
+        - text: Smart living
+      - generic [ref=f5e67]:
+        - generic [ref=f5e68]: ◆
+        - text: Social areas
+      - generic [ref=f5e69]:
+        - generic [ref=f5e70]: ⚡
+        - text: Private kitchen & bathroom
+    - generic [ref=f5e72]:
+      - img "Plant illustration" [ref=f5e74]
+      - generic [ref=f5e75]:
+        - heading "Security" [level=3] [ref=f5e76]
+        - generic [ref=f5e77]: Day and night
+        - list [ref=f5e78]:
+          - listitem [ref=f5e79]: 24/7 CCTV Surveillance
+          - listitem [ref=f5e80]: 7/7 Night patrol
+          - listitem [ref=f5e81]: High-security entrance door with electronic lock
+          - listitem [ref=f5e82]: Smart and secure access control
+      - img "Colorful student living space" [ref=f5e84]
+      - generic [ref=f5e85]:
+        - heading "Community living spaces" [level=3] [ref=f5e86]
+        - generic [ref=f5e87]: Open access, 24/7
+        - list [ref=f5e88]:
+          - listitem [ref=f5e89]: Fully equipped gym
+          - listitem [ref=f5e90]: Self-service laundry room
+          - listitem [ref=f5e91]: Social areas
+      - img "Smart lock" [ref=f5e93]
+      - generic [ref=f5e94]:
+        - heading "Support" [level=3] [ref=f5e95]
+        - generic [ref=f5e96]: We've got you covered
+        - list [ref=f5e97]:
+          - listitem [ref=f5e98]: 24/7 Resident support
+          - listitem [ref=f5e99]: Check-in & Onboarding assistance
+          - listitem [ref=f5e100]: Fast request handling
+          - listitem [ref=f5e101]: Fast maintenance support
+          - listitem [ref=f5e102]: Continuous experience improvements
+      - img "Student workspace" [ref=f5e104]
+      - generic [ref=f5e105]:
+        - heading "Super-fast WiFi" [level=3] [ref=f5e106]
+        - generic [ref=f5e107]: Always connected
+        - list [ref=f5e108]:
+          - listitem [ref=f5e109]: High-speed internet in every unit
+          - listitem [ref=f5e110]: Reliable connection for study & streaming
+          - listitem [ref=f5e111]: No hidden data caps
+    - generic [ref=f5e113] [cursor=pointer]:
+      - generic [ref=f5e114]: ▶
+      - heading "Press to Start" [level=3] [ref=f5e115]
+    - generic [ref=f5e116]:
+      - heading "Community" [level=2] [ref=f5e119]
+      - generic [ref=f5e120]: A shared way of living
+      - paragraph [ref=f5e121]: At Units, community happens naturally. Through common spaces, shared moments, and experiences that bring people together – with the freedom to join in whenever and however you want.
+      - link "Join our community ↗" [ref=f5e122] [cursor=pointer]:
+        - /url: "#"
+      - generic [ref=f5e123]:
+        - img "Community space" [ref=f5e124]
+        - img "Student life" [ref=f5e125]
+        - img "Living area" [ref=f5e126]
+        - img "Social space" [ref=f5e127]
+        - img "Community event" [ref=f5e128]
+        - img "Student home" [ref=f5e129]
+    - generic [ref=f5e130]:
+      - generic [ref=f5e131]:
+        - generic [ref=f5e132]: What defines us
+        - generic [ref=f5e133]: What defines us
+        - generic [ref=f5e134]: What defines us
+      - generic [ref=f5e135]:
+        - generic [ref=f5e136]:
+          - heading "For People" [level=3] [ref=f5e137]
+          - paragraph [ref=f5e138]: Everything starts with how it feels to live here. From private spaces to shared experiences, people always come first.
+        - generic [ref=f5e139]:
+          - heading "By Design" [level=3] [ref=f5e140]
+          - paragraph [ref=f5e141]: Nothing is accidental. Every detail is designed to support the way you live and the way you feel, every day.
+        - generic [ref=f5e142]:
+          - heading "With Care" [level=3] [ref=f5e143]
+          - paragraph [ref=f5e144]: At the heart of everything we do. We care for the people who live here, the spaces we create, and the city we're part of.
+    - heading "Our way of living ↗" [level=3] [ref=f5e147]:
+      - text: Our way of living
+      - generic [ref=f5e148]: ↗
+    - generic [ref=f5e149]:
+      - heading "Join our newsletter" [level=3] [ref=f5e150]
+      - generic [ref=f5e151]:
+        - textbox "Your email here" [ref=f5e152]
+        - button "→" [ref=f5e153] [cursor=pointer]
+    - contentinfo [ref=f5e154]:
+      - heading "units." [level=2] [ref=f5e317]
+      - generic [ref=f5e318]:
+        - generic [ref=f5e319]:
+          - generic [ref=f5e320]: © 2026 KORPO Development
+          - generic [ref=f5e321]: Web design by Big Horror. Code by Lemonjelly
+        - generic [ref=f5e322]:
+          - link "FAQs" [ref=f5e323] [cursor=pointer]:
+            - /url: "#"
+          - link "Privacy Policy" [ref=f5e324] [cursor=pointer]:
+            - /url: "#"
+          - link "Cookies Policy" [ref=f5e325] [cursor=pointer]:
+            - /url: "#"

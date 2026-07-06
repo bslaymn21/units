@@ -1,0 +1,3 @@
+[     834ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:8901/favicon.ico:0
+[  190290ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:8901/favicon.ico:0
+[  531471ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:8901/favicon.ico:0

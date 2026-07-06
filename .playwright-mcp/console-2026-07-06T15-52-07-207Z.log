@@ -1,0 +1,4 @@
+[    1440ms] [LOG] PixelYourSite Free version 11.2.0.7 @ https://units.gr/en/homepage/:53
+[    1558ms] [LOG] JQMIGRATE: Migrate is installed, version 3.4.1 @ https://units.gr/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1:1
+[    7362ms] [WARNING] GSAP target [object NodeList] not found. https://gsap.com @ https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js:9
+[  268337ms] [WARNING] tldjs is not defined @ https://units.gr/wp-content/plugins/pixelyoursite/dist/scripts/public.js?ver=11.2.0.7:3905

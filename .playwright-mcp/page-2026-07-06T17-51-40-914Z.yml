@@ -1,0 +1,307 @@
+- document [active] [ref=f30e1]:
+  - banner [ref=f30e2]:
+    - generic [ref=f30e3]:
+      - link "brand logo" [ref=f30e5] [cursor=pointer]:
+        - /url: https://units.gr/en/homepage/
+        - img [ref=f30e6]
+      - list [ref=f30e32]:
+        - listitem [ref=f30e33]:
+          - link "Student Homes" [ref=f30e34] [cursor=pointer]:
+            - /url: https://units.gr/en/unit/units-parkside/
+            - img [ref=f30e37]
+            - generic [ref=f30e39]: Student Homes
+        - listitem [ref=f30e40]:
+          - link "Our way of living" [ref=f30e41] [cursor=pointer]:
+            - /url: https://units.gr/en/our-way-of-living/
+            - img [ref=f30e44]
+            - generic [ref=f30e46]: Our way of living
+        - listitem [ref=f30e47]:
+          - link "Community" [ref=f30e48] [cursor=pointer]:
+            - /url: https://units.gr/en/community/
+            - img [ref=f30e51]
+            - generic [ref=f30e53]: Community
+        - listitem [ref=f30e54]:
+          - link "Contact" [ref=f30e55] [cursor=pointer]:
+            - /url: https://units.gr/en/contact/
+            - img [ref=f30e58]
+            - generic [ref=f30e60]: Contact
+      - button "Book your Unit" [ref=f30e61] [cursor=pointer]:
+        - generic [ref=f30e62]: Book your Unit
+        - img [ref=f30e63]
+      - link "Ελληνικά" [ref=f30e64] [cursor=pointer]:
+        - /url: https://units.gr/
+        - generic [ref=f30e65]: Ελληνικά
+        - img [ref=f30e66]
+      - generic [ref=f30e68]:
+        - link [ref=f30e69] [cursor=pointer]:
+          - /url: https://www.instagram.com/units.gr/
+        - link [ref=f30e70] [cursor=pointer]:
+          - /url: https://www.facebook.com/units.gr
+        - link [ref=f30e71] [cursor=pointer]:
+          - /url: https://www.tiktok.com/@units.gr
+  - main [ref=f30e72]:
+    - article [ref=f30e75]:
+      - generic [ref=f30e78]:
+        - generic [ref=f30e79]: Home of the uniquely awesome.
+        - generic [ref=f30e80]: All-inclusive student accommodation with everything you need to live, study and connect.
+        - button "Book your Unit" [ref=f30e81] [cursor=pointer]:
+          - generic [ref=f30e82]: Book your Unit
+          - img [ref=f30e83]
+          - img [ref=f30e86]
+      - generic [ref=f30e87]:
+        - generic [ref=f30e88]:
+          - generic [ref=f30e90]: Locations
+          - generic [ref=f30e91]:
+            - generic [ref=f30e92]:
+              - text: Where your everyday
+              - text: just works
+            - paragraph [ref=f30e94]: Wake up, step out, you’re there. Campus, classes, nights out – all within easy reach. No time wasted. Because at Units, location isn’t random. It’s chosen to match your rhythm and make life work better.
+          - generic [ref=f30e95]:
+            - generic [ref=f30e96]: Explore what’s
+            - generic [ref=f30e97]:
+              - generic [ref=f30e98]: Coming soon
+              - generic [ref=f30e99]: and
+              - generic [ref=f30e100]: Move-in ready!
+        - generic [ref=f30e102]:
+          - region "Map" [ref=f30e103]
+          - iframe [ref=f30e108]:
+            
+      - generic [ref=f30e110]:
+        - generic [ref=f30e111]:
+          - generic [ref=f30e112]:
+            - generic [ref=f30e113]: Social areas
+            - img [ref=f30e114]
+          - generic [ref=f30e116]:
+            - generic [ref=f30e117]: Private kitchen & bathroom
+            - img [ref=f30e118]
+          - generic [ref=f30e120]:
+            - generic [ref=f30e121]: 24/7 Security
+            - img [ref=f30e122]
+          - generic [ref=f30e124]:
+            - generic [ref=f30e125]: Fast and reliable maintenance
+            - img [ref=f30e126]
+          - generic [ref=f30e128]:
+            - generic [ref=f30e129]: Smart living
+            - img [ref=f30e130]
+          - generic [ref=f30e132]:
+            - generic [ref=f30e133]: Social areas
+            - img [ref=f30e134]
+          - generic [ref=f30e136]:
+            - generic [ref=f30e137]: Private kitchen & bathroom
+            - img [ref=f30e138]
+          - generic [ref=f30e140]:
+            - generic [ref=f30e141]: 24/7 Security
+            - img [ref=f30e142]
+          - generic [ref=f30e144]:
+            - generic [ref=f30e145]: Fast and reliable maintenance
+            - img [ref=f30e146]
+          - generic [ref=f30e148]:
+            - generic [ref=f30e149]: Smart living
+            - img [ref=f30e150]
+        - generic [ref=f30e153]:
+          - generic [ref=f30e154]:
+            - generic [ref=f30e155]:
+              - generic [ref=f30e156]: All-Inclusive Living
+              - img [ref=f30e159]
+            - generic [ref=f30e222]:
+              - generic [ref=f30e223]:
+                - text: One Unit.
+                - text: An entire universe.
+              - generic [ref=f30e224]: Your rent covers everything
+              - generic [ref=f30e225]: Each unit is its own universe, combining spaces and services for effortless, all-inclusive student living. Everything is included in your rent. No hidden fees, no surprises. Fully equipped, design-led spaces that let your everyday flow, your way.
+          - generic [ref=f30e227]:
+            - group "1 / 4" [ref=f30e228]:
+              - generic [ref=f30e230]:
+                - generic [ref=f30e231]: Community living spaces
+                - generic [ref=f30e232]: Open access, 24/7
+                - list [ref=f30e233]:
+                  - listitem [ref=f30e234]:
+                    - generic [ref=f30e235]: Fully equipped gym
+                  - listitem [ref=f30e236]:
+                    - generic [ref=f30e237]: Self-service laundry room
+                  - listitem [ref=f30e238]:
+                    - generic [ref=f30e239]: Social areas
+            - group "2 / 4" [ref=f30e240]:
+              - generic [ref=f30e242]:
+                - generic [ref=f30e243]: Security
+                - generic [ref=f30e244]: Day and night
+                - list [ref=f30e245]:
+                  - listitem [ref=f30e246]:
+                    - generic [ref=f30e247]: 24/7 CCTV Surveillance
+                  - listitem [ref=f30e248]:
+                    - generic [ref=f30e249]: 7/7 Night patrol
+                  - listitem [ref=f30e250]:
+                    - generic [ref=f30e251]: High-security entrance door with electronic lock
+                  - listitem [ref=f30e252]:
+                    - generic [ref=f30e253]: Smart and secure access control
+            - group "3 / 4" [ref=f30e254]:
+              - generic [ref=f30e256]:
+                - generic [ref=f30e257]: Support
+                - generic [ref=f30e258]: We’ve got you covered
+                - list [ref=f30e259]:
+                  - listitem [ref=f30e260]:
+                    - generic [ref=f30e261]: 24/7 Resident support
+                  - listitem [ref=f30e262]:
+                    - generic [ref=f30e263]: Check-in & Onboarding assistance
+                  - listitem [ref=f30e264]:
+                    - generic [ref=f30e265]: Fast request handling
+                  - listitem [ref=f30e266]:
+                    - generic [ref=f30e267]: Fast maintenance support
+                  - listitem [ref=f30e268]:
+                    - generic [ref=f30e269]: Continuous experience improvements
+            - group "4 / 4" [ref=f30e270]:
+              - generic [ref=f30e272]:
+                - generic [ref=f30e273]: Smart Living
+                - generic [ref=f30e274]: Designed for everyday ease
+                - list [ref=f30e275]:
+                  - listitem [ref=f30e276]:
+                    - generic [ref=f30e277]: Digital mobile key
+                  - listitem [ref=f30e278]:
+                    - generic [ref=f30e279]: Shared spaces reservations
+                  - listitem [ref=f30e280]:
+                    - generic [ref=f30e281]: Maintenance ticketing system
+                  - listitem [ref=f30e282]:
+                    - generic [ref=f30e283]: Laundry – EasyPay
+                  - listitem [ref=f30e284]:
+                    - generic [ref=f30e285]: Digital intercom
+      - generic [ref=f30e286]:
+        - generic [ref=f30e287]:
+          - generic [ref=f30e288]: Super-fast WiFi
+          - img [ref=f30e289]
+        - generic [ref=f30e291]:
+          - generic [ref=f30e292]: 24/7 Hot water
+          - img [ref=f30e293]
+        - generic [ref=f30e295]:
+          - generic [ref=f30e296]: Electric bike stations
+          - img [ref=f30e297]
+        - generic [ref=f30e299]:
+          - generic [ref=f30e300]: Elevator access
+          - img [ref=f30e301]
+        - generic [ref=f30e303]:
+          - generic [ref=f30e304]: Super-fast WiFi
+          - img [ref=f30e305]
+        - generic [ref=f30e307]:
+          - generic [ref=f30e308]: 24/7 Hot water
+          - img [ref=f30e309]
+        - generic [ref=f30e311]:
+          - generic [ref=f30e312]: Electric bike stations
+          - img [ref=f30e313]
+        - generic [ref=f30e315]:
+          - generic [ref=f30e316]: Elevator access
+          - img [ref=f30e317]
+      - generic [ref=f30e319]:
+        - generic [ref=f30e320]:
+          - generic [ref=f30e322]: Our Units
+          - generic [ref=f30e323]:
+            - generic [ref=f30e324]:
+              - text: Student living,
+              - text: redefined.
+            - paragraph [ref=f30e326]: A new concept in student living – fully furnished, move-in ready units designed for comfort and ease. Units is more than just a place to stay; it’s a place to belong. Join a vibrant community and experience student living like never before.
+            - generic [ref=f30e327]:
+              - generic [ref=f30e329]: Fully furnished
+              - generic [ref=f30e331]: Private workspace
+              - generic [ref=f30e333]: Private kitchen
+              - generic [ref=f30e335]: Private bathroom
+              - generic [ref=f30e337]: Smart TV
+              - generic [ref=f30e339]: Air-Conditioning
+              - generic [ref=f30e341]: Super-Fast WiFi
+              - generic [ref=f30e343]: Balcony
+            - link "Check out our Units" [ref=f30e344] [cursor=pointer]:
+              - /url: https://units.gr/en/unit/units-parkside/
+              - generic [ref=f30e345]: Check out our Units
+              - img [ref=f30e346]
+              - img [ref=f30e349]
+        - generic [ref=f30e351]:
+          - generic: Press to Start
+      - generic [ref=f30e356]:
+        - generic [ref=f30e358]: Community
+        - generic [ref=f30e359]:
+          - generic [ref=f30e360]: A shared way of living
+          - paragraph [ref=f30e362]: At Units, community happens naturally. Through common spaces, shared moments, and experiences that bring people together – with the freedom to join in whenever and however you want.
+          - link "Join our community" [ref=f30e363] [cursor=pointer]:
+            - /url: https://units.gr/en/community/
+            - generic [ref=f30e364]: Join our community
+            - img [ref=f30e365]
+            - img [ref=f30e368]
+      - generic [ref=f30e370]:
+        - img [ref=f30e371]
+        - generic [ref=f30e376]: What defines us
+        - img [ref=f30e377]
+      - generic [ref=f30e382]:
+        - generic [ref=f30e383]:
+          - generic [ref=f30e384]: For People
+          - generic [ref=f30e385]: Everything starts with how it feels to live here. From private spaces to shared experiences, people always come first.
+        - generic [ref=f30e386]:
+          - generic [ref=f30e387]: By Design
+          - generic [ref=f30e388]: Nothing is accidental. Every detail is designed to support the way you live and the way you feel, every day.
+        - generic [ref=f30e389]:
+          - generic [ref=f30e390]: With Care
+          - generic [ref=f30e391]: At the heart of everything we do. We care for the people who live here, the spaces we create, and the city we’re part of.
+      - generic [ref=f30e392]:
+        - link "Our way of living" [ref=f30e393] [cursor=pointer]:
+          - /url: https://units.gr/en/our-way-of-living/
+          - generic [ref=f30e394]: Our way of living
+          - img [ref=f30e395]
+          - img [ref=f30e398]
+        - generic [ref=f30e399]:
+          - generic [ref=f30e400]:
+            - generic [ref=f30e402]: Instagram
+            - generic [ref=f30e403]: Staying connected
+          - generic [ref=f30e411]:
+            - 'button "Open popup: Ήρθες για το unit. Έμεινες για τα vibes. 🚀✨ #Units #UniqueStudentHomes" [ref=f30e414] [cursor=pointer]':
+              - 'img "Ήρθες για το unit. Έμεινες για τα vibes. 🚀✨ #Units #UniqueStudentHomes" [ref=f30e415]'
+            - 'button "Open popup: Όπως θα έπρεπε να είναι. #Units #UniqueStudentHomes" [ref=f30e419] [cursor=pointer]':
+              - 'img "Όπως θα έπρεπε να είναι. #Units #UniqueStudentHomes" [ref=f30e420]'
+            - 'button "Open popup: Περνάς Αθήνα; Το πρώτο σου σπίτι σε περιμένει στο Units. 🚀 #Units #UniqueStudentHomes" [ref=f30e424] [cursor=pointer]':
+              - 'img "Περνάς Αθήνα; Το πρώτο σου σπίτι σε περιμένει στο Units. 🚀 #Units #UniqueStudentHomes" [ref=f30e425]'
+            - 'button "Open popup: Ανακάλυψες το unit σου; Τώρα ήρθε η ώρα να το δεις από κοντά. Συμπλήρωσε τη φόρμα στο units.gr και κλείσε την ξενάγησή σου. #Units #UniqueStudentHomes" [ref=f30e428] [cursor=pointer]':
+              - 'img "Ανακάλυψες το unit σου; Τώρα ήρθε η ώρα να το δεις από κοντά. Συμπλήρωσε τη φόρμα στο units.gr και κλείσε την ξενάγησή σου. #Units #UniqueStudentHomes" [ref=f30e429]'
+            - 'button "Open popup: Δεν ξέρουμε ποιος έβαλε τη μουσική. 🤷 Ξέρουμε μόνο ότι κανείς δεν έμεινε ακίνητος. Happy #WorldMusicDay από το Units. 🎶 #Units #UniqueStudentHomes" [ref=f30e433] [cursor=pointer]':
+              - 'img "Δεν ξέρουμε ποιος έβαλε τη μουσική. 🤷 Ξέρουμε μόνο ότι κανείς δεν έμεινε ακίνητος. Happy #WorldMusicDay από το Units. 🎶 #Units #UniqueStudentHomes" [ref=f30e434]'
+            - 'button "Open popup: 30 λεπτά διάβασμα. 3 ώρες recharge. #Units #UniqueStudentHomes" [ref=f30e438] [cursor=pointer]':
+              - 'img "30 λεπτά διάβασμα. 3 ώρες recharge. #Units #UniqueStudentHomes" [ref=f30e439]'
+            - 'button "Open popup: Πόση ύλη βγαίνει σε ένα 2ωρο; Το Units έφτιαξε το unofficial study timer της εξεταστικής σου. Link in bio 🎧 #Units #UniqueStudentHomes #EnteringExamOrbit" [ref=f30e442] [cursor=pointer]':
+              - 'img "Πόση ύλη βγαίνει σε ένα 2ωρο; Το Units έφτιαξε το unofficial study timer της εξεταστικής σου. Link in bio 🎧 #Units #UniqueStudentHomes #EnteringExamOrbit" [ref=f30e443]'
+            - 'button "Open popup: Δεν θα μπορούσαν να λείπουν από την πρώτη αποστολή… 🚀 #Units #UniqueStudentHomes" [ref=f30e447] [cursor=pointer]':
+              - 'img "Δεν θα μπορούσαν να λείπουν από την πρώτη αποστολή… 🚀 #Units #UniqueStudentHomes" [ref=f30e448]'
+    - generic [ref=f30e450]:
+      - generic [ref=f30e452]:
+        - generic "email" [ref=f30e453] [cursor=pointer]: Join our newsletter
+        - textbox "email" [ref=f30e455] [cursor=pointer]:
+          - /placeholder: Your email here
+        - button [ref=f30e456] [cursor=pointer]:
+          - img [ref=f30e457]
+          - img [ref=f30e460]
+      - generic [ref=f30e461]:
+        - generic [ref=f30e462]:
+          - generic "Box grid" [ref=f30e463]
+          - link "brand footer logo" [ref=f30e1146] [cursor=pointer]:
+            - /url: https://units.gr/en/homepage/
+            - img [ref=f30e1147]
+        - generic [ref=f30e1155]:
+          - generic [ref=f30e1156]:
+            - generic [ref=f30e1157]: © 2026 KORPO Development
+            - generic [ref=f30e1158]:
+              - text: Web design by
+              - link "Big Horror." [ref=f30e1159] [cursor=pointer]:
+                - /url: https://www.bighorrorathens.com/
+              - text: Code by
+              - link "Lemonjelly" [ref=f30e1160] [cursor=pointer]:
+                - /url: https://lemonjelly.gr/
+          - list [ref=f30e1161]:
+            - listitem [ref=f30e1162]:
+              - link "FAQs" [ref=f30e1163] [cursor=pointer]:
+                - /url: https://units.gr/en/faqs/
+            - listitem [ref=f30e1164]:
+              - link "Privacy Policy" [ref=f30e1165] [cursor=pointer]:
+                - /url: https://units.gr/en/privacy-policy/
+            - listitem [ref=f30e1166]:
+              - link "Cookies Policy" [ref=f30e1167] [cursor=pointer]:
+                - /url: https://units.gr/en/cookies-policy/
+  - complementary
+  - generic:
+    - generic:
+      - generic:
+        - img
+      - generic:
+        - generic: Back to home

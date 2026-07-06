@@ -1,0 +1,6 @@
+[     972ms] [LOG] PixelYourSite Free version 11.2.0.7 @ https://units.gr/en/homepage/:53
+[    1031ms] [LOG] JQMIGRATE: Migrate is installed, version 3.4.1 @ https://units.gr/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1:1
+[    2036ms] [WARNING] GSAP target [object NodeList] not found. https://gsap.com @ https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js:9
+[  102966ms] [LOG] PixelYourSite Free version 11.2.0.7 @ https://units.gr/en/homepage/:53
+[  103002ms] [LOG] JQMIGRATE: Migrate is installed, version 3.4.1 @ https://units.gr/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1:1
+[  104635ms] [WARNING] GSAP target [object NodeList] not found. https://gsap.com @ https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js:9

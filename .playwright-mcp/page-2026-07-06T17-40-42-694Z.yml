@@ -1,0 +1,183 @@
+- generic [active] [ref=f24e1]:
+  - navigation [ref=f24e2]:
+    - generic [ref=f24e3]:
+      - heading "units." [level=1] [ref=f24e4]
+      - paragraph [ref=f24e5]: Unique Student Homes
+    - link "01 ↗ سكن طلاب" [ref=f24e6] [cursor=pointer]:
+      - /url: "#student-homes"
+      - generic [ref=f24e7]: "01"
+      - generic [ref=f24e8]: ↗
+      - generic [ref=f24e9]: سكن طلاب
+    - link "02 ↗ أسلوب حياتنا" [ref=f24e10] [cursor=pointer]:
+      - /url: "#our-way"
+      - generic [ref=f24e11]: "02"
+      - generic [ref=f24e12]: ↗
+      - generic [ref=f24e13]: أسلوب حياتنا
+    - link "03 ↗ المجتمع" [ref=f24e14] [cursor=pointer]:
+      - /url: "#community"
+      - generic [ref=f24e15]: "03"
+      - generic [ref=f24e16]: ↗
+      - generic [ref=f24e17]: المجتمع
+    - link "04 ↗ تواصل معانا" [ref=f24e18] [cursor=pointer]:
+      - /url: "#contact"
+      - generic [ref=f24e19]: "04"
+      - generic [ref=f24e20]: ↗
+      - generic [ref=f24e21]: تواصل معانا
+    - link "احجز وحدتك" [ref=f24e22] [cursor=pointer]:
+      - /url: "#book"
+    - link "English 🌐" [ref=f24e23] [cursor=pointer]:
+      - /url: "#"
+    - generic [ref=f24e24]:
+      - link "☉":
+        - /url: https://www.instagram.com/units.gr/
+      - link "f":
+        - /url: https://www.facebook.com/units.gr
+      - link "♫":
+        - /url: https://www.tiktok.com/@units.gr
+  - generic [ref=f24e25]:
+    - generic [ref=f24e26]:
+      - img "Units student home interior" [ref=f24e28]
+      - generic [ref=f24e29]:
+        - heading "بيت الطلاب اللي مفيش زيه." [level=1] [ref=f24e30]
+        - paragraph [ref=f24e31]: سكن طلاب شامل بكل اللي محتاجه عشان تعيش و تدرس و تتعامل مع الناس.
+        - link "احجز وحدتك ↗" [ref=f24e32] [cursor=pointer]:
+          - /url: "#book"
+          - text: احجز وحدتك
+          - generic [ref=f24e33]: ↗
+    - generic [ref=f24e35]:
+      - generic [ref=f24e36]:
+        - generic [ref=f24e37]: المواقع
+        - heading "حيث يومك بيشتغل لوحده" [level=2] [ref=f24e38]
+        - paragraph [ref=f24e39]: صحيت، نزلت، وصلت. الجامعة، المحاضرات، السهر – كلهم قريبين منك. مفيش وقت ضايع. لأن في يونيتز، الموقع مش عشوائي. إنه مختار يناسب نمط حياتك ويخليها أسهل.
+        - paragraph [ref=f24e40]: شوف ايه اللي
+        - generic [ref=f24e41]:
+          - generic [ref=f24e42]: قريبًا
+          - generic [ref=f24e43]: و
+          - generic [ref=f24e44]: جاهز للسكن!
+      - img "Map showing Units Parkside location" [ref=f24e46]
+    - generic [ref=f24e48]:
+      - generic [ref=f24e49]:
+        - generic [ref=f24e50]: ◆
+        - text: أمن 24/7
+      - generic [ref=f24e51]:
+        - generic [ref=f24e52]: ⚡
+        - text: صيانة سريعة وموثوقة
+      - generic [ref=f24e53]:
+        - generic [ref=f24e54]: ◆
+        - text: حياة ذكية
+      - generic [ref=f24e55]:
+        - generic [ref=f24e56]: ⚡
+        - text: مناطق اجتماعية
+      - generic [ref=f24e57]:
+        - generic [ref=f24e58]: ◆
+        - text: مطبخ وحمام خاص
+      - generic [ref=f24e59]:
+        - generic [ref=f24e60]: ⚡
+        - text: أمن 24/7
+      - generic [ref=f24e61]:
+        - generic [ref=f24e62]: ◆
+        - text: صيانة سريعة وموثوقة
+      - generic [ref=f24e63]:
+        - generic [ref=f24e64]: ⚡
+        - text: حياة ذكية
+      - generic [ref=f24e65]:
+        - generic [ref=f24e66]: ◆
+        - text: مناطق اجتماعية
+      - generic [ref=f24e67]:
+        - generic [ref=f24e68]: ⚡
+        - text: مطبخ وحمام خاص
+    - generic [ref=f24e70]:
+      - img "Plant illustration" [ref=f24e72]
+      - generic [ref=f24e73]:
+        - heading "الأمان" [level=3] [ref=f24e74]
+        - generic [ref=f24e75]: يوم وليل
+        - list [ref=f24e76]:
+          - listitem [ref=f24e77]: كاميرات مراقبة 24/7
+          - listitem [ref=f24e78]: جولات ليلية
+          - listitem [ref=f24e79]: باب دخول بأمان عالي وقفل إلكتروني
+          - listitem [ref=f24e80]: نظام دخول ذكي وآمن
+      - img "Colorful student living space" [ref=f24e82]
+      - generic [ref=f24e83]:
+        - heading "مساحات مجتمعية" [level=3] [ref=f24e84]
+        - generic [ref=f24e85]: دخول مفتوح، 24/7
+        - list [ref=f24e86]:
+          - listitem [ref=f24e87]: جيم مجهز بالكامل
+          - listitem [ref=f24e88]: غرفة غسيل ذاتي
+          - listitem [ref=f24e89]: مناطق اجتماعية
+      - img "Smart lock" [ref=f24e91]
+      - generic [ref=f24e92]:
+        - heading "الدعم" [level=3] [ref=f24e93]
+        - generic [ref=f24e94]: بنغطيلك كل حاجة
+        - list [ref=f24e95]:
+          - listitem [ref=f24e96]: دعم السكان 24/7
+          - listitem [ref=f24e97]: مساعدة في تسجيل الدخول والتوجيه
+          - listitem [ref=f24e98]: معالجة سريعة للطلبات
+          - listitem [ref=f24e99]: دعم صيانة سريع
+          - listitem [ref=f24e100]: تحسينات مستمرة على التجربة
+      - img "Student workspace" [ref=f24e102]
+      - generic [ref=f24e103]:
+        - heading "واي فاي سريع جدًا" [level=3] [ref=f24e104]
+        - generic [ref=f24e105]: دائمًا متصل
+        - list [ref=f24e106]:
+          - listitem [ref=f24e107]: إنترنت عالي السرعة في كل وحدة
+          - listitem [ref=f24e108]: اتصال موثوق للدراسة والبث
+          - listitem [ref=f24e109]: مفيش حدود مخفية للبيانات
+    - generic [ref=f24e111] [cursor=pointer]:
+      - generic [ref=f24e112]: ▶
+      - heading "اضغط للتشغيل" [level=3] [ref=f24e113]
+    - generic [ref=f24e114]:
+      - heading "المجتمع" [level=2] [ref=f24e117]
+      - generic [ref=f24e118]: أسلوب حياة مشترك
+      - paragraph [ref=f24e119]: في يونيتز، المجتمع بيتكون بشكل طبيعي. عن طريق المساحات المشتركة، اللحظات المشتركة، والتجارب اللي بتجمع الناس – مع الحرية إنك تنضم في أي وقت وبأي شكل عايزه.
+      - link "انضم للمجتمع بتاعنا ↗" [ref=f24e120] [cursor=pointer]:
+        - /url: "#"
+      - generic [ref=f24e121]:
+        - img "Community space" [ref=f24e122]
+        - img "Student life" [ref=f24e123]
+        - img "Living area" [ref=f24e124]
+        - img "Social space" [ref=f24e125]
+        - img "Community event" [ref=f24e126]
+        - img "Student home" [ref=f24e127]
+    - generic [ref=f24e128]:
+      - generic [ref=f24e129]:
+        - generic [ref=f24e130]:
+          - generic [ref=f24e131]: إيه اللي بيحددنا
+          - generic [ref=f24e132]: إيه اللي بيحددنا
+          - generic [ref=f24e133]: إيه اللي بيحددنا
+          - generic [ref=f24e134]: إيه اللي بيحددنا
+        - generic [ref=f24e135]:
+          - generic [ref=f24e136]: إيه اللي بيحددنا
+          - generic [ref=f24e137]: إيه اللي بيحددنا
+          - generic [ref=f24e138]: إيه اللي بيحددنا
+          - generic [ref=f24e139]: إيه اللي بيحددنا
+      - generic [ref=f24e140]:
+        - generic [ref=f24e141]:
+          - heading "للناس" [level=3] [ref=f24e142]
+          - paragraph [ref=f24e143]: كل حاجة بتبدأ بإحساسك وأنت عايش هنا. من المساحات الخاصة للتجارب المشتركة، الناس دايمًا أولويتنا.
+        - generic [ref=f24e144]:
+          - heading "بالتصميم" [level=3] [ref=f24e145]
+          - paragraph [ref=f24e146]: مفيش حاجة بالصدفة. كل تفصيلة مصممة عشان تدعم طريقة حياتك وإحساسك، كل يوم.
+        - generic [ref=f24e147]:
+          - heading "باهتمام" [level=3] [ref=f24e148]
+          - paragraph [ref=f24e149]: في قلب كل حاجة بنعملها. بنهتم بالناس اللي عايشين هنا، والمساحات اللي بنصممها، والمدينة اللي إحنا جزء منها.
+    - heading "أسلوب حياتنا ↗" [level=3] [ref=f24e152]:
+      - text: أسلوب حياتنا
+      - generic [ref=f24e153]: ↗
+    - generic [ref=f24e155]:
+      - heading "انضم للنشرة البريدية بتاعتنا" [level=3] [ref=f24e156]
+      - generic [ref=f24e157]:
+        - textbox "اكتب ايميلك هنا" [ref=f24e158]
+        - button "→" [ref=f24e159] [cursor=pointer]
+    - contentinfo [ref=f24e160]:
+      - heading "units." [level=2] [ref=f24e318]
+      - generic [ref=f24e319]:
+        - generic [ref=f24e320]:
+          - generic [ref=f24e321]: © 2026 KORPO Development
+          - generic [ref=f24e322]: تصميم موقع من Big Horror. كود من Lemonjelly
+        - generic [ref=f24e323]:
+          - link "الأسئلة الشائعة" [ref=f24e324] [cursor=pointer]:
+            - /url: "#"
+          - link "سياسة الخصوصية" [ref=f24e325] [cursor=pointer]:
+            - /url: "#"
+          - link "سياسة ملفات تعريف الارتباط" [ref=f24e326] [cursor=pointer]:
+            - /url: "#"

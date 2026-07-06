@@ -1,0 +1,216 @@
+- generic [active] [ref=f8e1]:
+  - generic [ref=f8e3]:
+    - generic [ref=f8e4]: units.
+    - generic [ref=f8e5]: UNIQUE STUDENT HOMES
+  - navigation [ref=f8e6]:
+    - link "01 ↗ سكن طلاب" [ref=f8e7] [cursor=pointer]:
+      - /url: "#student-homes"
+      - generic [ref=f8e8]: "01"
+      - generic [ref=f8e9]: ↗
+      - generic [ref=f8e10]: سكن طلاب
+    - link "02 ↗ أسلوب حياتنا" [ref=f8e11] [cursor=pointer]:
+      - /url: "#our-way"
+      - generic [ref=f8e12]: "02"
+      - generic [ref=f8e13]: ↗
+      - generic [ref=f8e14]: أسلوب حياتنا
+    - link "03 ↗ المجتمع" [ref=f8e15] [cursor=pointer]:
+      - /url: "#community"
+      - generic [ref=f8e16]: "03"
+      - generic [ref=f8e17]: ↗
+      - generic [ref=f8e18]: المجتمع
+    - link "04 ↗ تواصل معانا" [ref=f8e19] [cursor=pointer]:
+      - /url: "#contact"
+      - generic [ref=f8e20]: "04"
+      - generic [ref=f8e21]: ↗
+      - generic [ref=f8e22]: تواصل معانا
+    - link "احجز وحدتك" [ref=f8e23] [cursor=pointer]:
+      - /url: "#book"
+    - link "English 🌐" [ref=f8e24] [cursor=pointer]:
+      - /url: "#"
+  - generic [ref=f8e25]:
+    - generic [ref=f8e26]:
+      - generic:
+        - img "Units student home interior"
+      - generic [ref=f8e27]:
+        - heading "بيت الطلاب اللي مفيش زيه." [level=1] [ref=f8e28]
+        - paragraph [ref=f8e29]: سكن طلاب شامل بكل اللي محتاجه عشان تعيش و تدرس و تتعامل مع الناس.
+        - link "احجز وحدتك ↗" [ref=f8e30] [cursor=pointer]:
+          - /url: "#book"
+          - text: احجز وحدتك
+          - generic [ref=f8e31]: ↗
+    - generic [ref=f8e33]:
+      - generic [ref=f8e34]:
+        - generic [ref=f8e35]: المواقع
+        - heading "حيث يومك بيشتغل لوحده" [level=2] [ref=f8e36]
+        - paragraph [ref=f8e37]: صحيت، نزلت، وصلت. الجامعة، المحاضرات، السهر – كلهم قريبين منك. مفيش وقت ضايع. لأن في يونيتز، الموقع مش عشوائي. إنه مختار يناسب نمط حياتك ويخليها أسهل.
+        - paragraph [ref=f8e38]: شوف ايه اللي
+        - generic [ref=f8e39]:
+          - generic [ref=f8e40]: قريبًا
+          - generic [ref=f8e41]: و
+          - generic [ref=f8e42]: جاهز للسكن!
+      - img "Map showing Units Parkside location" [ref=f8e44]
+    - generic [ref=f8e46]:
+      - generic [ref=f8e47]:
+        - generic [ref=f8e48]: ◆
+        - text: أمن 24/7
+      - generic [ref=f8e49]:
+        - generic [ref=f8e50]: ⚡
+        - text: صيانة سريعة وموثوقة
+      - generic [ref=f8e51]:
+        - generic [ref=f8e52]: ◆
+        - text: حياة ذكية
+      - generic [ref=f8e53]:
+        - generic [ref=f8e54]: ⚡
+        - text: مناطق اجتماعية
+      - generic [ref=f8e55]:
+        - generic [ref=f8e56]: ◆
+        - text: مطبخ وحمام خاص
+      - generic [ref=f8e57]:
+        - generic [ref=f8e58]: ⚡
+        - text: أمن 24/7
+      - generic [ref=f8e59]:
+        - generic [ref=f8e60]: ◆
+        - text: صيانة سريعة وموثوقة
+      - generic [ref=f8e61]:
+        - generic [ref=f8e62]: ⚡
+        - text: حياة ذكية
+      - generic [ref=f8e63]:
+        - generic [ref=f8e64]: ◆
+        - text: مناطق اجتماعية
+      - generic [ref=f8e65]:
+        - generic [ref=f8e66]: ⚡
+        - text: مطبخ وحمام خاص
+    - generic [ref=f8e68]:
+      - img "Plant illustration" [ref=f8e70]
+      - generic [ref=f8e71]:
+        - heading "الأمان" [level=3] [ref=f8e72]
+        - generic [ref=f8e73]: يوم وليل
+        - list [ref=f8e74]:
+          - listitem [ref=f8e75]: كاميرات مراقبة 24/7
+          - listitem [ref=f8e76]: جولات ليلية
+          - listitem [ref=f8e77]: باب دخول بأمان عالي وقفل إلكتروني
+          - listitem [ref=f8e78]: نظام دخول ذكي وآمن
+      - img "Colorful student living space" [ref=f8e80]
+      - generic [ref=f8e81]:
+        - heading "مساحات مجتمعية" [level=3] [ref=f8e82]
+        - generic [ref=f8e83]: دخول مفتوح، 24/7
+        - list [ref=f8e84]:
+          - listitem [ref=f8e85]: جيم مجهز بالكامل
+          - listitem [ref=f8e86]: غرفة غسيل ذاتي
+          - listitem [ref=f8e87]: مناطق اجتماعية
+      - img "Smart lock" [ref=f8e89]
+      - generic [ref=f8e90]:
+        - heading "Support" [level=3] [ref=f8e91]
+        - generic [ref=f8e92]: بنغطيلك كل حاجة
+        - list [ref=f8e93]:
+          - listitem [ref=f8e94]: دعم السكان 24/7
+          - listitem [ref=f8e95]: مساعدة في تسجيل الدخول والتوجيه
+          - listitem [ref=f8e96]: معالجة سريعة للطلبات
+          - listitem [ref=f8e97]: دعم صيانة سريع
+          - listitem [ref=f8e98]: تحسينات مستمرة على التجربة
+      - generic [ref=f8e99]:
+        - heading "Smart Living" [level=3] [ref=f8e100]
+        - generic [ref=f8e101]: مصمم للراحة اليومية
+        - list [ref=f8e102]:
+          - listitem [ref=f8e103]: مفتاح موبايل رقمي
+          - listitem [ref=f8e104]: حجز المساحات المشتركة
+          - listitem [ref=f8e105]: نظام تذاكر الصيانة
+          - listitem [ref=f8e106]: غسيل EasyPay
+          - listitem [ref=f8e107]: الاتصال الداخلي الرقمي
+      - img "Student workspace" [ref=f8e109]
+    - generic [ref=f8e111]:
+      - generic [ref=f8e112]:
+        - generic [ref=f8e113]: ◆
+        - text: Electric bike stations
+      - generic [ref=f8e114]:
+        - generic [ref=f8e115]: ⚡
+        - text: Elevator access
+      - generic [ref=f8e116]:
+        - generic [ref=f8e117]: ◆
+        - text: Super-fast WiFi
+      - generic [ref=f8e118]:
+        - generic [ref=f8e119]: ⚡
+        - text: 24/7 Hot water
+      - generic [ref=f8e120]:
+        - generic [ref=f8e121]: ◆
+        - text: Electric bike stations
+      - generic [ref=f8e122]:
+        - generic [ref=f8e123]: ⚡
+        - text: Elevator access
+      - generic [ref=f8e124]:
+        - generic [ref=f8e125]: ◆
+        - text: Super-fast WiFi
+      - generic [ref=f8e126]:
+        - generic [ref=f8e127]: ⚡
+        - text: 24/7 Hot water
+    - generic [ref=f8e128]:
+      - generic [ref=f8e130]: Our Units
+      - generic [ref=f8e131]:
+        - heading "شوف الوحدات بتاعتنا ↗" [level=3] [ref=f8e133]:
+          - text: شوف الوحدات بتاعتنا
+          - generic [ref=f8e134]: ↗
+        - img "Unit interior" [ref=f8e136]
+    - generic [ref=f8e137]:
+      - generic [ref=f8e138]:
+        - img "Community space" [ref=f8e140]
+        - generic [ref=f8e141]:
+          - generic [ref=f8e142]: Community
+          - heading "أسلوب حياة مشترك" [level=2] [ref=f8e143]
+          - paragraph [ref=f8e144]: في يونيتز، المجتمع بيتكون بشكل طبيعي. عن طريق المساحات المشتركة، اللحظات المشتركة، والتجارب اللي بتجمع الناس – مع الحرية إنك تنضم في أي وقت وبأي شكل عايزه.
+          - link "انضم للمجتمع بتاعنا ↗" [ref=f8e145] [cursor=pointer]:
+            - /url: "#"
+        - img "Community event" [ref=f8e147]
+      - generic [ref=f8e148]:
+        - img "Student life" [ref=f8e149]
+        - img "Living area" [ref=f8e150]
+        - img "Community event" [ref=f8e151]
+        - img "Student home" [ref=f8e152]
+        - img "Community" [ref=f8e153]
+    - generic [ref=f8e154]:
+      - generic [ref=f8e156]:
+        - generic [ref=f8e157]:
+          - generic [ref=f8e158]: What defines us
+          - generic [ref=f8e159]: What defines us
+          - generic [ref=f8e160]: What defines us
+          - generic [ref=f8e161]: What defines us
+        - generic [ref=f8e162]:
+          - generic [ref=f8e163]: What defines us
+          - generic [ref=f8e164]: What defines us
+          - generic [ref=f8e165]: What defines us
+          - generic [ref=f8e166]: What defines us
+      - generic [ref=f8e167]:
+        - generic [ref=f8e168]:
+          - heading "For People" [level=3] [ref=f8e169]
+          - paragraph [ref=f8e170]: كل حاجة بتبدأ بإحساسك وأنت عايش هنا. من المساحات الخاصة للتجارب المشتركة، الناس دايمًا أولويتنا.
+        - generic [ref=f8e171]:
+          - heading "By Design" [level=3] [ref=f8e172]
+          - paragraph [ref=f8e173]: مفيش حاجة بالصدفة. كل تفصيلة مصممة عشان تدعم طريقة حياتك وإحساسك، كل يوم.
+        - generic [ref=f8e174]:
+          - heading "With Care" [level=3] [ref=f8e175]
+          - paragraph [ref=f8e176]: في قلب كل حاجة بنعملها. بنهتم بالناس اللي عايشين هنا، والمساحات اللي بنصممها، والمدينة اللي إحنا جزء منها.
+    - heading "أسلوب حياتنا ↗" [level=3] [ref=f8e179]:
+      - text: أسلوب حياتنا
+      - generic [ref=f8e180]: ↗
+    - generic [ref=f8e183]:
+      - generic [ref=f8e184]: Instagram
+      - heading "Staying connected" [level=3] [ref=f8e185]:
+        - text: Staying
+        - text: connected
+    - generic [ref=f8e187]:
+      - heading "Join our newsletter" [level=3] [ref=f8e189]
+      - generic [ref=f8e190]:
+        - textbox "Your email here" [ref=f8e191]
+        - button "↗" [ref=f8e192] [cursor=pointer]
+    - contentinfo [ref=f8e193]:
+      - heading "units." [level=2] [ref=f8e351]
+      - generic [ref=f8e352]:
+        - generic [ref=f8e353]:
+          - generic [ref=f8e354]: © 2026 KORPO Development
+          - generic [ref=f8e355]: تصميم موقع من Big Horror. كود من Lemonjelly
+        - generic [ref=f8e356]:
+          - link "الأسئلة الشائعة" [ref=f8e357] [cursor=pointer]:
+            - /url: "#"
+          - link "سياسة الخصوصية" [ref=f8e358] [cursor=pointer]:
+            - /url: "#"
+          - link "سياسة ملفات تعريف الارتباط" [ref=f8e359] [cursor=pointer]:
+            - /url: "#"
