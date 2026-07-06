@@ -945,27 +945,40 @@
             .menu-btn { display: flex; }
             .mobile-menu { display: flex; }
 
-            .main-content { margin-right: 0; padding-top: 60px; }
+            .main-content { margin: 0; padding-top: 60px; width: 100%; overflow-x: hidden; }
 
+            .hero { min-height: auto; height: auto; }
             .hero-title { font-size: 32px; }
+            .hero-overlay { padding: 40px 20px; text-align: center; }
+            .hero-subtitle { text-align: center; }
+
+            .locations, .features, .community, .our-way, .staying-connected-section { padding: 30px 16px; }
+            .locations-text { text-align: center; }
             .locations-grid { grid-template-columns: 1fr; }
             .features-grid { grid-template-columns: 1fr; }
-            .values-grid { grid-template-columns: 1fr; padding: 20px; }
-            .hero, .locations, .features, .community, .our-way { padding: 20px; }
-            .marquee-container { margin: 0 20px; }
-            .newsletter { padding: 0 20px; flex-direction: column; }
-            .newsletter-label { border-radius: 24px 24px 0 0; }
+            .feature-card--info { text-align: center; }
+
+            .values-grid { grid-template-columns: 1fr; padding: 16px; }
+            .value-card { text-align: center; }
+
+            .marquee-container { margin: 0 16px; }
+            .defines-banner { margin: 0 16px; }
+            .footer { margin: 0 16px; }
+
+            .newsletter { padding: 0 16px; flex-direction: column; border-radius: 24px; }
+            .newsletter-label { border-radius: 24px 24px 0 0; text-align: center; }
             .newsletter-form { border-radius: 0 0 24px 24px; }
-            .footer { margin: 0 20px; }
+
             .footer-logo h2 { font-size: 60px; }
             .defines-marquee-inner .text { font-size: 36px; }
+
             .community-3col { grid-template-columns: 1fr; }
             .community-center { align-items: center; text-align: center; }
             .community-center .community-title, .community-center .community-desc { text-align: center; }
             .our-units-grid { grid-template-columns: 1fr; }
-            .staying-connected { flex-direction: column; padding: 0 20px 20px; }
+            .staying-connected { flex-direction: column; padding: 0 16px 20px; }
             .staying-connected-gallery { overflow-x: auto; }
-            .defines-banner { margin: 0 20px; }
+            .tag { text-align: center; }
         }
     </style>
 </head>
